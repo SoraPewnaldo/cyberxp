@@ -1,0 +1,4832 @@
+[
+  {
+    "id": 1,
+    "roomName": "Hosted Hypervisors",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hostedhypervisors",
+    "xpReward": 10,
+    "roadmapOrder": 1
+  },
+  {
+    "id": 2,
+    "roomName": "Enumeration & Brute Force",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/enumerationbruteforce",
+    "xpReward": 10,
+    "roadmapOrder": 2
+  },
+  {
+    "id": 3,
+    "roomName": "Introduction to CryptOps",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introductiontocryptops",
+    "xpReward": 10,
+    "roadmapOrder": 3
+  },
+  {
+    "id": 4,
+    "roomName": "Linux File System Analysis",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxfilesystemanalysis",
+    "xpReward": 10,
+    "roadmapOrder": 4
+  },
+  {
+    "id": 5,
+    "roomName": "Threat Hunting: Foothold",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/threathuntingfoothold",
+    "xpReward": 10,
+    "roadmapOrder": 5
+  },
+  {
+    "id": 6,
+    "roomName": "Threat Hunting: Introduction",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introductiontothreathunting",
+    "xpReward": 10,
+    "roadmapOrder": 6
+  },
+  {
+    "id": 7,
+    "roomName": "Preparation",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/preparation",
+    "xpReward": 10,
+    "roadmapOrder": 7
+  },
+  {
+    "id": 8,
+    "roomName": "Intro to Logs",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtologs",
+    "xpReward": 10,
+    "roadmapOrder": 8
+  },
+  {
+    "id": 9,
+    "roomName": "Intro to Threat Emulation",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/threatemulationintro",
+    "xpReward": 10,
+    "roadmapOrder": 9
+  },
+  {
+    "id": 10,
+    "roomName": "Security Engineer Intro",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/securityengineerintro",
+    "xpReward": 10,
+    "roadmapOrder": 10
+  },
+  {
+    "id": 11,
+    "roomName": "Intro to Docker",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtodockerk8pdqk",
+    "xpReward": 10,
+    "roadmapOrder": 11
+  },
+  {
+    "id": 12,
+    "roomName": "SDLC",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sdlc",
+    "xpReward": 10,
+    "roadmapOrder": 12
+  },
+  {
+    "id": 13,
+    "roomName": "Welcome",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hello",
+    "xpReward": 10,
+    "roadmapOrder": 13
+  },
+  {
+    "id": 14,
+    "roomName": "How to use TryHackMe",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/howtousetryhackme",
+    "xpReward": 10,
+    "roadmapOrder": 14
+  },
+  {
+    "id": 15,
+    "roomName": "Tutorial",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/tutorial",
+    "xpReward": 10,
+    "roadmapOrder": 15
+  },
+  {
+    "id": 16,
+    "roomName": "OpenVPN",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/openvpn",
+    "xpReward": 10,
+    "roadmapOrder": 16
+  },
+  {
+    "id": 17,
+    "roomName": "Learning Cyber Security",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/beginnerpathintro",
+    "xpReward": 10,
+    "roadmapOrder": 17
+  },
+  {
+    "id": 18,
+    "roomName": "Starting Out In Cyber Sec",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/startingoutincybersec",
+    "xpReward": 10,
+    "roadmapOrder": 18
+  },
+  {
+    "id": 19,
+    "roomName": "Introductory Researching",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtoresearch",
+    "xpReward": 10,
+    "roadmapOrder": 19
+  },
+  {
+    "id": 20,
+    "roomName": "Regular expressions",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/catregex",
+    "xpReward": 10,
+    "roadmapOrder": 20
+  },
+  {
+    "id": 21,
+    "roomName": "Careers in Cyber",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/careersincyber",
+    "xpReward": 10,
+    "roadmapOrder": 21
+  },
+  {
+    "id": 22,
+    "roomName": "Junior Security Analyst Intro",
+    "category": "General",
+    "path": "Intro Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/jrsecanalystintrouxo",
+    "xpReward": 10,
+    "roadmapOrder": 22
+  },
+  {
+    "id": 23,
+    "roomName": "Linux Modules",
+    "category": "Linux",
+    "path": "Linux Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxmodules",
+    "xpReward": 10,
+    "roadmapOrder": 23
+  },
+  {
+    "id": 24,
+    "roomName": "Linux Fundamentals Part 1",
+    "category": "Linux",
+    "path": "Linux Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxfundamentalspart1",
+    "xpReward": 10,
+    "roadmapOrder": 24
+  },
+  {
+    "id": 25,
+    "roomName": "Linux Fundamentals Part 2",
+    "category": "Linux",
+    "path": "Linux Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxfundamentalspart2",
+    "xpReward": 10,
+    "roadmapOrder": 25
+  },
+  {
+    "id": 26,
+    "roomName": "Linux Fundamentals Part 3",
+    "category": "Linux",
+    "path": "Linux Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxfundamentalspart3",
+    "xpReward": 10,
+    "roadmapOrder": 26
+  },
+  {
+    "id": 27,
+    "roomName": "Windows Fundamentals 1",
+    "category": "Windows",
+    "path": "Windows Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsfundamentals1xbx",
+    "xpReward": 10,
+    "roadmapOrder": 27
+  },
+  {
+    "id": 28,
+    "roomName": "Windows Fundamentals 2",
+    "category": "Windows",
+    "path": "Windows Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsfundamentals2x0x",
+    "xpReward": 10,
+    "roadmapOrder": 28
+  },
+  {
+    "id": 29,
+    "roomName": "Windows Fundamentals 3",
+    "category": "Windows",
+    "path": "Windows Fundamentals",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsfundamentals3xzx",
+    "xpReward": 10,
+    "roadmapOrder": 29
+  },
+  {
+    "id": 30,
+    "roomName": "Hypervisor Internals",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hypervisorinternals",
+    "xpReward": 10,
+    "roadmapOrder": 30
+  },
+  {
+    "id": 31,
+    "roomName": "Splunk: Exploring SPL",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/splunkexploringspl",
+    "xpReward": 10,
+    "roadmapOrder": 31
+  },
+  {
+    "id": 32,
+    "roomName": "ParrotPost: Phishing Analysis",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/parrotpost",
+    "xpReward": 10,
+    "roadmapOrder": 32
+  },
+  {
+    "id": 33,
+    "roomName": "x86 Architecture Overview",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/x8664arch",
+    "xpReward": 10,
+    "roadmapOrder": 33
+  },
+  {
+    "id": 34,
+    "roomName": "Threat Intelligence for SOC",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/threatintelligenceforsoc",
+    "xpReward": 10,
+    "roadmapOrder": 34
+  },
+  {
+    "id": 35,
+    "roomName": "Basic Pentesting",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/basicpentestingjt",
+    "xpReward": 10,
+    "roadmapOrder": 35
+  },
+  {
+    "id": 36,
+    "roomName": "Pentesting Fundamentals",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pentestingfundamentals",
+    "xpReward": 10,
+    "roadmapOrder": 36
+  },
+  {
+    "id": 37,
+    "roomName": "Principles of Security",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/principlesofsecurity",
+    "xpReward": 10,
+    "roadmapOrder": 37
+  },
+  {
+    "id": 38,
+    "roomName": "The Hacker Methodology",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hackermethodology",
+    "xpReward": 10,
+    "roadmapOrder": 38
+  },
+  {
+    "id": 39,
+    "roomName": "Physical Security Intro",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/physicalsecurityintro",
+    "xpReward": 10,
+    "roadmapOrder": 39
+  },
+  {
+    "id": 40,
+    "roomName": "Linux Strength Training",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxstrengthtraining",
+    "xpReward": 10,
+    "roadmapOrder": 40
+  },
+  {
+    "id": 41,
+    "roomName": "OpenVAS",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/openvas",
+    "xpReward": 10,
+    "roadmapOrder": 41
+  },
+  {
+    "id": 42,
+    "roomName": "ISO27001",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/iso27001",
+    "xpReward": 10,
+    "roadmapOrder": 42
+  },
+  {
+    "id": 43,
+    "roomName": "UltraTech",
+    "category": "General",
+    "path": "Basics Rooms",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ultratech1",
+    "xpReward": 10,
+    "roadmapOrder": 43
+  },
+  {
+    "id": 44,
+    "roomName": "Passive Reconnaissance",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/passiverecon",
+    "xpReward": 10,
+    "roadmapOrder": 44
+  },
+  {
+    "id": 45,
+    "roomName": "Active Reconnaissance",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/activerecon",
+    "xpReward": 10,
+    "roadmapOrder": 45
+  },
+  {
+    "id": 46,
+    "roomName": "Content Discovery",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/contentdiscovery",
+    "xpReward": 10,
+    "roadmapOrder": 46
+  },
+  {
+    "id": 47,
+    "roomName": "OhSINT",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ohsint",
+    "xpReward": 10,
+    "roadmapOrder": 47
+  },
+  {
+    "id": 48,
+    "roomName": "Shodan.io",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/shodan",
+    "xpReward": 10,
+    "roadmapOrder": 48
+  },
+  {
+    "id": 49,
+    "roomName": "Google Dorking",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/googledorking",
+    "xpReward": 10,
+    "roadmapOrder": 49
+  },
+  {
+    "id": 50,
+    "roomName": "WebOSINT",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/webosint",
+    "xpReward": 10,
+    "roadmapOrder": 50
+  },
+  {
+    "id": 51,
+    "roomName": "Sakura Room",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sakura",
+    "xpReward": 10,
+    "roadmapOrder": 51
+  },
+  {
+    "id": 52,
+    "roomName": "Red Team Recon",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/redteamrecon",
+    "xpReward": 10,
+    "roadmapOrder": 52
+  },
+  {
+    "id": 53,
+    "roomName": "Searchlight - IMINT",
+    "category": "General",
+    "path": "Recon",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/searchlightosint",
+    "xpReward": 10,
+    "roadmapOrder": 53
+  },
+  {
+    "id": 54,
+    "roomName": "Python Basics",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pythonbasics",
+    "xpReward": 10,
+    "roadmapOrder": 54
+  },
+  {
+    "id": 55,
+    "roomName": "Python Playground",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pythonplayground",
+    "xpReward": 10,
+    "roadmapOrder": 55
+  },
+  {
+    "id": 56,
+    "roomName": "Intro PoC Scripting",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/intropocscripting",
+    "xpReward": 10,
+    "roadmapOrder": 56
+  },
+  {
+    "id": 57,
+    "roomName": "Peak Hill",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/peakhill",
+    "xpReward": 10,
+    "roadmapOrder": 57
+  },
+  {
+    "id": 58,
+    "roomName": "JavaScript Basics",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/javascriptbasics",
+    "xpReward": 10,
+    "roadmapOrder": 58
+  },
+  {
+    "id": 59,
+    "roomName": "Bash Scripting",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bashscripting",
+    "xpReward": 10,
+    "roadmapOrder": 59
+  },
+  {
+    "id": 60,
+    "roomName": "Learn Rust",
+    "category": "General",
+    "path": "Scripting",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rust",
+    "xpReward": 10,
+    "roadmapOrder": 60
+  },
+  {
+    "id": 61,
+    "roomName": "Introductory Networking",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtonetworking",
+    "xpReward": 10,
+    "roadmapOrder": 61
+  },
+  {
+    "id": 62,
+    "roomName": "What is Networking?",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/whatisnetworking",
+    "xpReward": 10,
+    "roadmapOrder": 62
+  },
+  {
+    "id": 63,
+    "roomName": "Networking",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bpnetworking",
+    "xpReward": 10,
+    "roadmapOrder": 63
+  },
+  {
+    "id": 64,
+    "roomName": "Intro to LAN",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtolan",
+    "xpReward": 10,
+    "roadmapOrder": 64
+  },
+  {
+    "id": 65,
+    "roomName": "HTTP in detail",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/httpindetail",
+    "xpReward": 10,
+    "roadmapOrder": 65
+  },
+  {
+    "id": 66,
+    "roomName": "DNS in detail",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/dnsindetail",
+    "xpReward": 10,
+    "roadmapOrder": 66
+  },
+  {
+    "id": 67,
+    "roomName": "Dumping Router Firmware",
+    "category": "Networking",
+    "path": "Networking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rfirmware",
+    "xpReward": 10,
+    "roadmapOrder": 67
+  },
+  {
+    "id": 68,
+    "roomName": "Snyk Open Source",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/snykopensource",
+    "xpReward": 10,
+    "roadmapOrder": 68
+  },
+  {
+    "id": 69,
+    "roomName": "Snyk Code",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/snykcode",
+    "xpReward": 10,
+    "roadmapOrder": 69
+  },
+  {
+    "id": 70,
+    "roomName": "Intro to IaC",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtoiac",
+    "xpReward": 10,
+    "roadmapOrder": 70
+  },
+  {
+    "id": 71,
+    "roomName": "Metasploit: Introduction",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/metasploitintro",
+    "xpReward": 10,
+    "roadmapOrder": 71
+  },
+  {
+    "id": 72,
+    "roomName": "tmux",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rptmux",
+    "xpReward": 10,
+    "roadmapOrder": 72
+  },
+  {
+    "id": 73,
+    "roomName": "REmux The Tmux",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/tmuxremux",
+    "xpReward": 10,
+    "roadmapOrder": 73
+  },
+  {
+    "id": 74,
+    "roomName": "Hydra",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hydra",
+    "xpReward": 10,
+    "roadmapOrder": 74
+  },
+  {
+    "id": 75,
+    "roomName": "Toolbox: Vim",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/toolboxvim",
+    "xpReward": 10,
+    "roadmapOrder": 75
+  },
+  {
+    "id": 76,
+    "roomName": "Introduction to OWASP ZAP",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/learnowaspzap",
+    "xpReward": 10,
+    "roadmapOrder": 76
+  },
+  {
+    "id": 77,
+    "roomName": "Phishing: HiddenEye",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/phishinghiddeneye",
+    "xpReward": 10,
+    "roadmapOrder": 77
+  },
+  {
+    "id": 78,
+    "roomName": "RustScan",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rustscan",
+    "xpReward": 10,
+    "roadmapOrder": 78
+  },
+  {
+    "id": 79,
+    "roomName": "Nessus",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rpnessusredux",
+    "xpReward": 10,
+    "roadmapOrder": 79
+  },
+  {
+    "id": 80,
+    "roomName": "Nmap Live Host Discovery",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/nmap01",
+    "xpReward": 10,
+    "roadmapOrder": 80
+  },
+  {
+    "id": 81,
+    "roomName": "Nmap",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/furthernmap",
+    "xpReward": 10,
+    "roadmapOrder": 81
+  },
+  {
+    "id": 82,
+    "roomName": "TShark",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/tshark",
+    "xpReward": 10,
+    "roadmapOrder": 82
+  },
+  {
+    "id": 83,
+    "roomName": "ffuf",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ffuf",
+    "xpReward": 10,
+    "roadmapOrder": 83
+  },
+  {
+    "id": 84,
+    "roomName": "Burp Suite: The Basics",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/burpsuitebasics",
+    "xpReward": 10,
+    "roadmapOrder": 84
+  },
+  {
+    "id": 85,
+    "roomName": "Burp Suite: Repeater",
+    "category": "General",
+    "path": "Tooling",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/burpsuiterepeater",
+    "xpReward": 10,
+    "roadmapOrder": 85
+  },
+  {
+    "id": 86,
+    "roomName": "K8s Runtime Security",
+    "category": "General",
+    "path": "Container Security",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/k8sruntimesecurity",
+    "xpReward": 10,
+    "roadmapOrder": 86
+  },
+  {
+    "id": 87,
+    "roomName": "K8s Best Security Practices",
+    "category": "General",
+    "path": "Container Security",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/k8sbestsecuritypractices",
+    "xpReward": 10,
+    "roadmapOrder": 87
+  },
+  {
+    "id": 88,
+    "roomName": "Cluster Hardening",
+    "category": "General",
+    "path": "Container Security",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/clusterhardening",
+    "xpReward": 10,
+    "roadmapOrder": 88
+  },
+  {
+    "id": 89,
+    "roomName": "Breaking RSA",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/breakrsa",
+    "xpReward": 10,
+    "roadmapOrder": 89
+  },
+  {
+    "id": 90,
+    "roomName": "Cryptography for Dummies",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cryptographyfordummies",
+    "xpReward": 10,
+    "roadmapOrder": 90
+  },
+  {
+    "id": 91,
+    "roomName": "Crack the hash",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/crackthehash",
+    "xpReward": 10,
+    "roadmapOrder": 91
+  },
+  {
+    "id": 92,
+    "roomName": "Crack The Hash Level 2",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/crackthehashlevel2",
+    "xpReward": 10,
+    "roadmapOrder": 92
+  },
+  {
+    "id": 93,
+    "roomName": "Agent Sudo",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/agentsudoctf",
+    "xpReward": 10,
+    "roadmapOrder": 93
+  },
+  {
+    "id": 94,
+    "roomName": "Brute It",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bruteit",
+    "xpReward": 10,
+    "roadmapOrder": 94
+  },
+  {
+    "id": 95,
+    "roomName": "Introduction to Cryptography",
+    "category": "Cryptography",
+    "path": "Cryptography & Hashes",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cryptographyintro",
+    "xpReward": 10,
+    "roadmapOrder": 95
+  },
+  {
+    "id": 96,
+    "roomName": "CC: Steganography",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ccstego",
+    "xpReward": 10,
+    "roadmapOrder": 96
+  },
+  {
+    "id": 97,
+    "roomName": "Cicada-3301 Vol:1",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cicada3301vol1",
+    "xpReward": 10,
+    "roadmapOrder": 97
+  },
+  {
+    "id": 98,
+    "roomName": "Musical Stego",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/musicalstego",
+    "xpReward": 10,
+    "roadmapOrder": 98
+  },
+  {
+    "id": 99,
+    "roomName": "Madness",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/madness",
+    "xpReward": 10,
+    "roadmapOrder": 99
+  },
+  {
+    "id": 100,
+    "roomName": "Psycho Break",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/psychobreak",
+    "xpReward": 10,
+    "roadmapOrder": 100
+  },
+  {
+    "id": 101,
+    "roomName": "Unstable Twin",
+    "category": "General",
+    "path": "Steganography",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/unstabletwin",
+    "xpReward": 10,
+    "roadmapOrder": 101
+  },
+  {
+    "id": 102,
+    "roomName": "Microservices Architectures",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/microservicearchitectures",
+    "xpReward": 10,
+    "roadmapOrder": 102
+  },
+  {
+    "id": 103,
+    "roomName": "NoSQL Injection",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/nosqlinjectiontutorial",
+    "xpReward": 10,
+    "roadmapOrder": 103
+  },
+  {
+    "id": 104,
+    "roomName": "Advanced SQL Injection",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/advancedsqlinjection",
+    "xpReward": 10,
+    "roadmapOrder": 104
+  },
+  {
+    "id": 105,
+    "roomName": "XSS",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/axss",
+    "xpReward": 10,
+    "roadmapOrder": 105
+  },
+  {
+    "id": 106,
+    "roomName": "CSRF",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/csrfV2",
+    "xpReward": 10,
+    "roadmapOrder": 106
+  },
+  {
+    "id": 107,
+    "roomName": "File Inclusion, Path Traversal",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/filepathtraversal",
+    "xpReward": 10,
+    "roadmapOrder": 107
+  },
+  {
+    "id": 108,
+    "roomName": "HTTP Request Smuggling",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/httprequestsmuggling",
+    "xpReward": 10,
+    "roadmapOrder": 108
+  },
+  {
+    "id": 109,
+    "roomName": "HTTP/2 Request Smuggling",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/http2requestsmuggling",
+    "xpReward": 10,
+    "roadmapOrder": 109
+  },
+  {
+    "id": 110,
+    "roomName": "SSRF",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ssrfhr",
+    "xpReward": 10,
+    "roadmapOrder": 110
+  },
+  {
+    "id": 111,
+    "roomName": "OWASP Broken Access Control",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/owaspbrokenaccesscontrol",
+    "xpReward": 10,
+    "roadmapOrder": 111
+  },
+  {
+    "id": 112,
+    "roomName": "Vulnerabilities 101",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnerabilities101",
+    "xpReward": 10,
+    "roadmapOrder": 113
+  },
+  {
+    "id": 113,
+    "roomName": "Walking An Application",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/walkinganapplication",
+    "xpReward": 10,
+    "roadmapOrder": 114
+  },
+  {
+    "id": 114,
+    "roomName": "OWASP Top 10 - 2021",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/owasptop102021",
+    "xpReward": 10,
+    "roadmapOrder": 115
+  },
+  {
+    "id": 115,
+    "roomName": "OWASP Top 10",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/owasptop10",
+    "xpReward": 10,
+    "roadmapOrder": 116
+  },
+  {
+    "id": 116,
+    "roomName": "OWASP Juice Shop",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/owaspjuiceshop",
+    "xpReward": 10,
+    "roadmapOrder": 117
+  },
+  {
+    "id": 117,
+    "roomName": "OWASP Mutillidae II",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/owaspmutillidae",
+    "xpReward": 10,
+    "roadmapOrder": 118
+  },
+  {
+    "id": 118,
+    "roomName": "WebGOAT",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/webgoat",
+    "xpReward": 10,
+    "roadmapOrder": 119
+  },
+  {
+    "id": 119,
+    "roomName": "Web Application Security",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introwebapplicationsecurity",
+    "xpReward": 10,
+    "roadmapOrder": 120
+  },
+  {
+    "id": 120,
+    "roomName": "DVWA",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/dvwa",
+    "xpReward": 10,
+    "roadmapOrder": 121
+  },
+  {
+    "id": 121,
+    "roomName": "VulnNet",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnnet1",
+    "xpReward": 10,
+    "roadmapOrder": 122
+  },
+  {
+    "id": 122,
+    "roomName": "Juicy Details",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/juicydetails",
+    "xpReward": 10,
+    "roadmapOrder": 123
+  },
+  {
+    "id": 123,
+    "roomName": "Vulnversity",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnversity",
+    "xpReward": 10,
+    "roadmapOrder": 124
+  },
+  {
+    "id": 124,
+    "roomName": "SQL Injection Lab",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sqlilab",
+    "xpReward": 10,
+    "roadmapOrder": 125
+  },
+  {
+    "id": 125,
+    "roomName": "SSTI",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/learnssti",
+    "xpReward": 10,
+    "roadmapOrder": 126
+  },
+  {
+    "id": 126,
+    "roomName": "SQL Injection",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sqlinjectionlm",
+    "xpReward": 10,
+    "roadmapOrder": 127
+  },
+  {
+    "id": 127,
+    "roomName": "Ignite",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ignite",
+    "xpReward": 10,
+    "roadmapOrder": 129
+  },
+  {
+    "id": 128,
+    "roomName": "Overpass",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/overpass",
+    "xpReward": 10,
+    "roadmapOrder": 130
+  },
+  {
+    "id": 129,
+    "roomName": "Year of the Rabbit",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/yearoftherabbit",
+    "xpReward": 10,
+    "roadmapOrder": 131
+  },
+  {
+    "id": 130,
+    "roomName": "Develpy",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bsidesgtdevelpy",
+    "xpReward": 10,
+    "roadmapOrder": 132
+  },
+  {
+    "id": 131,
+    "roomName": "Jack-of-All-Trades",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/jackofalltrades",
+    "xpReward": 10,
+    "roadmapOrder": 133
+  },
+  {
+    "id": 132,
+    "roomName": "Bolt",
+    "category": "Web",
+    "path": "Web",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bolt",
+    "xpReward": 10,
+    "roadmapOrder": 134
+  },
+  {
+    "id": 133,
+    "roomName": "Android Hacking 101",
+    "category": "General",
+    "path": "Android",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/androidhacking101",
+    "xpReward": 10,
+    "roadmapOrder": 135
+  },
+  {
+    "id": 134,
+    "roomName": "Linux Incident Surface",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxincidentsurface",
+    "xpReward": 10,
+    "roadmapOrder": 136
+  },
+  {
+    "id": 135,
+    "roomName": "IR Playbooks",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/irplaybooks",
+    "xpReward": 10,
+    "roadmapOrder": 137
+  },
+  {
+    "id": 136,
+    "roomName": "Intro to Cold System Forensics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtocoldsystemforensics",
+    "xpReward": 10,
+    "roadmapOrder": 138
+  },
+  {
+    "id": 137,
+    "roomName": "Unified Kill Chain",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/unifiedkillchain",
+    "xpReward": 10,
+    "roadmapOrder": 139
+  },
+  {
+    "id": 138,
+    "roomName": "Forensic Imaging",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/forensicimaging",
+    "xpReward": 10,
+    "roadmapOrder": 140
+  },
+  {
+    "id": 139,
+    "roomName": "IR Philosophy and Ethics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/irphilosophyethics",
+    "xpReward": 10,
+    "roadmapOrder": 141
+  },
+  {
+    "id": 140,
+    "roomName": "Windows Applications Forensics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsapplications",
+    "xpReward": 10,
+    "roadmapOrder": 142
+  },
+  {
+    "id": 141,
+    "roomName": "Legal Considerations in DFIR",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/dfirprocesslegalconsiderations",
+    "xpReward": 10,
+    "roadmapOrder": 143
+  },
+  {
+    "id": 142,
+    "roomName": "Servidae: Log Analysis in ELK",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/servidae",
+    "xpReward": 10,
+    "roadmapOrder": 144
+  },
+  {
+    "id": 143,
+    "roomName": "Cyber Kill Chain",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cyberkillchainzmt",
+    "xpReward": 10,
+    "roadmapOrder": 145
+  },
+  {
+    "id": 144,
+    "roomName": "Identification & Scoping",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/identificationandscoping",
+    "xpReward": 10,
+    "roadmapOrder": 146
+  },
+  {
+    "id": 145,
+    "roomName": "Digital Forensics Case B4DM755",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/caseb4dm755",
+    "xpReward": 10,
+    "roadmapOrder": 147
+  },
+  {
+    "id": 146,
+    "roomName": "Linux Server Forensics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxserverforensics",
+    "xpReward": 10,
+    "roadmapOrder": 148
+  },
+  {
+    "id": 147,
+    "roomName": "Forensics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/forensics",
+    "xpReward": 10,
+    "roadmapOrder": 149
+  },
+  {
+    "id": 148,
+    "roomName": "Memory Forensics",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/memoryforensics",
+    "xpReward": 10,
+    "roadmapOrder": 150
+  },
+  {
+    "id": 149,
+    "roomName": "Volatility",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bpvolatility",
+    "xpReward": 10,
+    "roadmapOrder": 151
+  },
+  {
+    "id": 150,
+    "roomName": "Disk Analysis &amp; Autopsy",
+    "category": "Forensics",
+    "path": "Forensics",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/autopsy2ze0",
+    "xpReward": 10,
+    "roadmapOrder": 152
+  },
+  {
+    "id": 151,
+    "roomName": "Wifi Hacking 101",
+    "category": "General",
+    "path": "Wi-Fi Hacking",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/wifihacking101",
+    "xpReward": 10,
+    "roadmapOrder": 153
+  },
+  {
+    "id": 152,
+    "roomName": "Windows x64 Assembly",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/win64assembly",
+    "xpReward": 10,
+    "roadmapOrder": 154
+  },
+  {
+    "id": 153,
+    "roomName": "Reversing ELF",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/reverselfiles",
+    "xpReward": 10,
+    "roadmapOrder": 155
+  },
+  {
+    "id": 154,
+    "roomName": "Windows Reversing Intro",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsreversingintro",
+    "xpReward": 10,
+    "roadmapOrder": 156
+  },
+  {
+    "id": 155,
+    "roomName": "JVM Reverse Engineering",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/jvmreverseengineering",
+    "xpReward": 10,
+    "roadmapOrder": 157
+  },
+  {
+    "id": 156,
+    "roomName": "CC: Radare2",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ccradare2",
+    "xpReward": 10,
+    "roadmapOrder": 158
+  },
+  {
+    "id": 157,
+    "roomName": "CC: Ghidra",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ccghidra",
+    "xpReward": 10,
+    "roadmapOrder": 159
+  },
+  {
+    "id": 158,
+    "roomName": "Aster",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/aster",
+    "xpReward": 10,
+    "roadmapOrder": 160
+  },
+  {
+    "id": 159,
+    "roomName": "Classic Passwd",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/classicpasswd",
+    "xpReward": 10,
+    "roadmapOrder": 161
+  },
+  {
+    "id": 160,
+    "roomName": "REloaded",
+    "category": "General",
+    "path": "Reverse Engineering",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/reloaded",
+    "xpReward": 10,
+    "roadmapOrder": 162
+  },
+  {
+    "id": 161,
+    "roomName": "Intro to Detection Engineering",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtodetectionengineering",
+    "xpReward": 10,
+    "roadmapOrder": 163
+  },
+  {
+    "id": 162,
+    "roomName": "History of Malware",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/historyofmalware",
+    "xpReward": 10,
+    "roadmapOrder": 164
+  },
+  {
+    "id": 163,
+    "roomName": "MAL: Malware Introductory",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/malmalintroductory",
+    "xpReward": 10,
+    "roadmapOrder": 165
+  },
+  {
+    "id": 164,
+    "roomName": "Basic Malware RE",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/basicmalwarere",
+    "xpReward": 10,
+    "roadmapOrder": 166
+  },
+  {
+    "id": 165,
+    "roomName": "MAL: Researching",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/malresearching",
+    "xpReward": 10,
+    "roadmapOrder": 167
+  },
+  {
+    "id": 166,
+    "roomName": "Mobile Malware Analysis",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/mma",
+    "xpReward": 10,
+    "roadmapOrder": 168
+  },
+  {
+    "id": 167,
+    "roomName": "Carnage",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/c2carnage",
+    "xpReward": 10,
+    "roadmapOrder": 169
+  },
+  {
+    "id": 168,
+    "roomName": "Dunkle Materie",
+    "category": "General",
+    "path": "Malware Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/dunklematerieptxc9",
+    "xpReward": 10,
+    "roadmapOrder": 170
+  },
+  {
+    "id": 169,
+    "roomName": "Linux Privilege Escalation",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linprivesc",
+    "xpReward": 10,
+    "roadmapOrder": 171
+  },
+  {
+    "id": 170,
+    "roomName": "Linux PrivEsc",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxprivesc",
+    "xpReward": 10,
+    "roadmapOrder": 172
+  },
+  {
+    "id": 171,
+    "roomName": "Linux PrivEsc Arena",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxprivescarena",
+    "xpReward": 10,
+    "roadmapOrder": 173
+  },
+  {
+    "id": 172,
+    "roomName": "Windows PrivEsc",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windows10privesc",
+    "xpReward": 10,
+    "roadmapOrder": 174
+  },
+  {
+    "id": 173,
+    "roomName": "Windows PrivEsc Arena",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/windowsprivescarena",
+    "xpReward": 10,
+    "roadmapOrder": 175
+  },
+  {
+    "id": 174,
+    "roomName": "Linux Agency",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxagency",
+    "xpReward": 10,
+    "roadmapOrder": 176
+  },
+  {
+    "id": 175,
+    "roomName": "Sudo Security Bypass",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sudovulnsbypass",
+    "xpReward": 10,
+    "roadmapOrder": 177
+  },
+  {
+    "id": 176,
+    "roomName": "Sudo Buffer Overflow",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/sudovulnsbof",
+    "xpReward": 10,
+    "roadmapOrder": 178
+  },
+  {
+    "id": 177,
+    "roomName": "Blaster",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/blaster",
+    "xpReward": 10,
+    "roadmapOrder": 179
+  },
+  {
+    "id": 178,
+    "roomName": "Kenobi",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/kenobi",
+    "xpReward": 10,
+    "roadmapOrder": 181
+  },
+  {
+    "id": 179,
+    "roomName": "c4ptur3-th3-fl4g",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/c4ptur3th3fl4g",
+    "xpReward": 10,
+    "roadmapOrder": 182
+  },
+  {
+    "id": 180,
+    "roomName": "Pickle Rick",
+    "category": "PrivEsc",
+    "path": "PrivEsc",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/picklerick",
+    "xpReward": 10,
+    "roadmapOrder": 183
+  },
+  {
+    "id": 181,
+    "roomName": "Windows Incident Surface",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/winincidentsurface",
+    "xpReward": 10,
+    "roadmapOrder": 184
+  },
+  {
+    "id": 182,
+    "roomName": "Registry Persistence Detection",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/registrypersistencedetection",
+    "xpReward": 10,
+    "roadmapOrder": 185
+  },
+  {
+    "id": 183,
+    "roomName": "Investigating Windows",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/investigatingwindows",
+    "xpReward": 10,
+    "roadmapOrder": 186
+  },
+  {
+    "id": 184,
+    "roomName": "Investigating Windows 2.0",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/investigatingwindows2",
+    "xpReward": 10,
+    "roadmapOrder": 187
+  },
+  {
+    "id": 185,
+    "roomName": "Investigating Windows 3.x",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/investigatingwindows3",
+    "xpReward": 10,
+    "roadmapOrder": 188
+  },
+  {
+    "id": 186,
+    "roomName": "Blueprint",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/blueprint",
+    "xpReward": 10,
+    "roadmapOrder": 189
+  },
+  {
+    "id": 187,
+    "roomName": "VulnNet: Active",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnnetactive",
+    "xpReward": 10,
+    "roadmapOrder": 190
+  },
+  {
+    "id": 188,
+    "roomName": "Anthem",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/anthem",
+    "xpReward": 10,
+    "roadmapOrder": 191
+  },
+  {
+    "id": 189,
+    "roomName": "Blue",
+    "category": "Windows",
+    "path": "Windows",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/blue",
+    "xpReward": 10,
+    "roadmapOrder": 192
+  },
+  {
+    "id": 190,
+    "roomName": "Active Directory Hardening",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/activedirectoryening",
+    "xpReward": 10,
+    "roadmapOrder": 193
+  },
+  {
+    "id": 191,
+    "roomName": "Active Directory Basics",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/winadbasics",
+    "xpReward": 10,
+    "roadmapOrder": 194
+  },
+  {
+    "id": 192,
+    "roomName": "Breaching Active Directory",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/breachingad",
+    "xpReward": 10,
+    "roadmapOrder": 195
+  },
+  {
+    "id": 193,
+    "roomName": "Attacktive Directory",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/attacktivedirectory",
+    "xpReward": 10,
+    "roadmapOrder": 196
+  },
+  {
+    "id": 194,
+    "roomName": "Post-Exploitation Basics",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/postexploit",
+    "xpReward": 10,
+    "roadmapOrder": 197
+  },
+  {
+    "id": 195,
+    "roomName": "USTOUN",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ustoun",
+    "xpReward": 10,
+    "roadmapOrder": 198
+  },
+  {
+    "id": 196,
+    "roomName": "Enterprise",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/enterprise",
+    "xpReward": 10,
+    "roadmapOrder": 199
+  },
+  {
+    "id": 197,
+    "roomName": "RazorBlack",
+    "category": "Active Directory",
+    "path": "Active Directory",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/raz0rblack",
+    "xpReward": 10,
+    "roadmapOrder": 200
+  },
+  {
+    "id": 198,
+    "roomName": "h4cked",
+    "category": "Networking",
+    "path": "PCAP Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/h4cked",
+    "xpReward": 10,
+    "roadmapOrder": 201
+  },
+  {
+    "id": 199,
+    "roomName": "CCT2019",
+    "category": "Networking",
+    "path": "PCAP Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cct2019",
+    "xpReward": 10,
+    "roadmapOrder": 203
+  },
+  {
+    "id": 200,
+    "roomName": "Overpass 2 - Hacked",
+    "category": "Networking",
+    "path": "PCAP Analysis",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/overpass2hacked",
+    "xpReward": 10,
+    "roadmapOrder": 204
+  },
+  {
+    "id": 201,
+    "roomName": "Buffer Overflow Prep",
+    "category": "General",
+    "path": "BufferOverflow",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bufferoverflowprep",
+    "xpReward": 10,
+    "roadmapOrder": 205
+  },
+  {
+    "id": 202,
+    "roomName": "Gatekeeper",
+    "category": "General",
+    "path": "BufferOverflow",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/gatekeeper",
+    "xpReward": 10,
+    "roadmapOrder": 206
+  },
+  {
+    "id": 203,
+    "roomName": "Chronicle",
+    "category": "General",
+    "path": "BufferOverflow",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/chronicle",
+    "xpReward": 10,
+    "roadmapOrder": 207
+  },
+  {
+    "id": 204,
+    "roomName": "Intro To Pwntools",
+    "category": "General",
+    "path": "BufferOverflow",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/introtopwntools",
+    "xpReward": 10,
+    "roadmapOrder": 208
+  },
+  {
+    "id": 205,
+    "roomName": "Offensive Security Intro",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/offensivesecurityintro",
+    "xpReward": 10,
+    "roadmapOrder": 209
+  },
+  {
+    "id": 206,
+    "roomName": "Defensive Security Intro",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/defensivesecurityintro",
+    "xpReward": 10,
+    "roadmapOrder": 210
+  },
+  {
+    "id": 207,
+    "roomName": "Pyrat",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pyrat",
+    "xpReward": 10,
+    "roadmapOrder": 211
+  },
+  {
+    "id": 208,
+    "roomName": "Cheese CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cheesectfv10",
+    "xpReward": 10,
+    "roadmapOrder": 212
+  },
+  {
+    "id": 209,
+    "roomName": "U.A. High School",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/yueiua",
+    "xpReward": 10,
+    "roadmapOrder": 213
+  },
+  {
+    "id": 210,
+    "roomName": "Joomify",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/joomify",
+    "xpReward": 10,
+    "roadmapOrder": 214
+  },
+  {
+    "id": 211,
+    "roomName": "Critical",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/critical",
+    "xpReward": 10,
+    "roadmapOrder": 215
+  },
+  {
+    "id": 212,
+    "roomName": "Publisher",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/publisher",
+    "xpReward": 10,
+    "roadmapOrder": 216
+  },
+  {
+    "id": 213,
+    "roomName": "Eviction",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/eviction",
+    "xpReward": 10,
+    "roadmapOrder": 217
+  },
+  {
+    "id": 214,
+    "roomName": "Become a Hacker",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/becomeahackeroa",
+    "xpReward": 10,
+    "roadmapOrder": 218
+  },
+  {
+    "id": 215,
+    "roomName": "W1seGuy",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/w1seguy",
+    "xpReward": 10,
+    "roadmapOrder": 219
+  },
+  {
+    "id": 216,
+    "roomName": "mKingdom",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/mkingdom",
+    "xpReward": 10,
+    "roadmapOrder": 220
+  },
+  {
+    "id": 217,
+    "roomName": "How Websites Work",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/howwebsiteswork",
+    "xpReward": 10,
+    "roadmapOrder": 221
+  },
+  {
+    "id": 218,
+    "roomName": "Linux Process Analysis",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/linuxprocessanalysis",
+    "xpReward": 10,
+    "roadmapOrder": 222
+  },
+  {
+    "id": 219,
+    "roomName": "CyberLens",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cyberlensp6",
+    "xpReward": 10,
+    "roadmapOrder": 223
+  },
+  {
+    "id": 220,
+    "roomName": "Security Principles",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/securityprinciples",
+    "xpReward": 10,
+    "roadmapOrder": 224
+  },
+  {
+    "id": 221,
+    "roomName": "TryHack3M: Bricks Heist",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/tryhack3mbricksheist",
+    "xpReward": 10,
+    "roadmapOrder": 225
+  },
+  {
+    "id": 222,
+    "roomName": "Creative",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/creative",
+    "xpReward": 10,
+    "roadmapOrder": 226
+  },
+  {
+    "id": 223,
+    "roomName": "Putting it all together",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/puttingitalltogether",
+    "xpReward": 10,
+    "roadmapOrder": 228
+  },
+  {
+    "id": 224,
+    "roomName": "Probe",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/probe",
+    "xpReward": 10,
+    "roadmapOrder": 229
+  },
+  {
+    "id": 225,
+    "roomName": "Dreaming",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/dreaming",
+    "xpReward": 10,
+    "roadmapOrder": 230
+  },
+  {
+    "id": 226,
+    "roomName": "Pyramid Of Pain",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pyramidofpainax",
+    "xpReward": 10,
+    "roadmapOrder": 231
+  },
+  {
+    "id": 227,
+    "roomName": "The Witch's Cauldron",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cauldron",
+    "xpReward": 10,
+    "roadmapOrder": 232
+  },
+  {
+    "id": 228,
+    "roomName": "Bulletproof Penguin",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bppenguin",
+    "xpReward": 10,
+    "roadmapOrder": 233
+  },
+  {
+    "id": 229,
+    "roomName": "Hijack",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/hijack",
+    "xpReward": 10,
+    "roadmapOrder": 234
+  },
+  {
+    "id": 230,
+    "roomName": "Compiled",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/compiled",
+    "xpReward": 10,
+    "roadmapOrder": 235
+  },
+  {
+    "id": 231,
+    "roomName": "Super Secret TIp",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/supersecrettip",
+    "xpReward": 10,
+    "roadmapOrder": 236
+  },
+  {
+    "id": 232,
+    "roomName": "Lesson Learned?",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/lessonlearned",
+    "xpReward": 10,
+    "roadmapOrder": 237
+  },
+  {
+    "id": 233,
+    "roomName": "Grep",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/greprtp",
+    "xpReward": 10,
+    "roadmapOrder": 238
+  },
+  {
+    "id": 234,
+    "roomName": "Red",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/redisl33t",
+    "xpReward": 10,
+    "roadmapOrder": 239
+  },
+  {
+    "id": 235,
+    "roomName": "Snapped \"Phish\"-ing Line",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/snappedphishingline",
+    "xpReward": 10,
+    "roadmapOrder": 240
+  },
+  {
+    "id": 236,
+    "roomName": "Cat Pictures 2",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/catpictures2",
+    "xpReward": 10,
+    "roadmapOrder": 241
+  },
+  {
+    "id": 237,
+    "roomName": "Flip",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/flip",
+    "xpReward": 10,
+    "roadmapOrder": 242
+  },
+  {
+    "id": 238,
+    "roomName": "Valley!",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/valleype",
+    "xpReward": 10,
+    "roadmapOrder": 243
+  },
+  {
+    "id": 239,
+    "roomName": "Capture!",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/capture",
+    "xpReward": 10,
+    "roadmapOrder": 244
+  },
+  {
+    "id": 240,
+    "roomName": "Opacity",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/opacity",
+    "xpReward": 10,
+    "roadmapOrder": 245
+  },
+  {
+    "id": 241,
+    "roomName": "LookBack",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/lookback",
+    "xpReward": 10,
+    "roadmapOrder": 246
+  },
+  {
+    "id": 242,
+    "roomName": "Bugged",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bugged",
+    "xpReward": 10,
+    "roadmapOrder": 247
+  },
+  {
+    "id": 243,
+    "roomName": "GamingServer",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/gamingserver",
+    "xpReward": 10,
+    "roadmapOrder": 248
+  },
+  {
+    "id": 244,
+    "roomName": "Confidential",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/confidential",
+    "xpReward": 10,
+    "roadmapOrder": 249
+  },
+  {
+    "id": 245,
+    "roomName": "OverlayFS - CVE-2021-3493",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/overlayfs",
+    "xpReward": 10,
+    "roadmapOrder": 250
+  },
+  {
+    "id": 246,
+    "roomName": "Bounty Hacker",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cowboyhacker",
+    "xpReward": 10,
+    "roadmapOrder": 252
+  },
+  {
+    "id": 247,
+    "roomName": "Fowsniff CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ctf",
+    "xpReward": 10,
+    "roadmapOrder": 253
+  },
+  {
+    "id": 248,
+    "roomName": "RootMe",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/rrootme",
+    "xpReward": 10,
+    "roadmapOrder": 254
+  },
+  {
+    "id": 249,
+    "roomName": "AttackerKB",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/attackerkb",
+    "xpReward": 10,
+    "roadmapOrder": 255
+  },
+  {
+    "id": 250,
+    "roomName": "Library",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bsidesgtlibrary",
+    "xpReward": 10,
+    "roadmapOrder": 258
+  },
+  {
+    "id": 251,
+    "roomName": "Thompson",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bsidesgtthompson",
+    "xpReward": 10,
+    "roadmapOrder": 259
+  },
+  {
+    "id": 252,
+    "roomName": "Simple CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/easyctf",
+    "xpReward": 10,
+    "roadmapOrder": 260
+  },
+  {
+    "id": 253,
+    "roomName": "LazyAdmin",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/lazyadmin",
+    "xpReward": 10,
+    "roadmapOrder": 261
+  },
+  {
+    "id": 254,
+    "roomName": "Anonforce",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bsidesgtanonforce",
+    "xpReward": 10,
+    "roadmapOrder": 262
+  },
+  {
+    "id": 255,
+    "roomName": "Wgel CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/wgelctf",
+    "xpReward": 10,
+    "roadmapOrder": 264
+  },
+  {
+    "id": 256,
+    "roomName": "Dav",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/bsidesgtdav",
+    "xpReward": 10,
+    "roadmapOrder": 266
+  },
+  {
+    "id": 257,
+    "roomName": "Ninja Skills",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ninjaskills",
+    "xpReward": 10,
+    "roadmapOrder": 267
+  },
+  {
+    "id": 258,
+    "roomName": "Ice",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ice",
+    "xpReward": 10,
+    "roadmapOrder": 268
+  },
+  {
+    "id": 259,
+    "roomName": "Lian_Yu",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/lianyu",
+    "xpReward": 10,
+    "roadmapOrder": 269
+  },
+  {
+    "id": 260,
+    "roomName": "The Cod Caper",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/thecodcaper",
+    "xpReward": 10,
+    "roadmapOrder": 270
+  },
+  {
+    "id": 261,
+    "roomName": "Encryption - Crypto 101",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/encryptioncrypto101",
+    "xpReward": 10,
+    "roadmapOrder": 272
+  },
+  {
+    "id": 262,
+    "roomName": "Brooklyn Nine Nine",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/brooklynninenine",
+    "xpReward": 10,
+    "roadmapOrder": 273
+  },
+  {
+    "id": 263,
+    "roomName": "KoTH Food CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/kothfoodctf",
+    "xpReward": 10,
+    "roadmapOrder": 277
+  },
+  {
+    "id": 264,
+    "roomName": "Easy Peasy",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/easypeasyctf",
+    "xpReward": 10,
+    "roadmapOrder": 278
+  },
+  {
+    "id": 265,
+    "roomName": "Tony the Tiger",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/tonythetiger",
+    "xpReward": 10,
+    "roadmapOrder": 279
+  },
+  {
+    "id": 266,
+    "roomName": "CTF collection Vol.1",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/ctfcollectionvol1",
+    "xpReward": 10,
+    "roadmapOrder": 280
+  },
+  {
+    "id": 267,
+    "roomName": "Smag Grotto",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/smaggrotto",
+    "xpReward": 10,
+    "roadmapOrder": 281
+  },
+  {
+    "id": 268,
+    "roomName": "Couch",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/couch",
+    "xpReward": 10,
+    "roadmapOrder": 282
+  },
+  {
+    "id": 269,
+    "roomName": "Source",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/source",
+    "xpReward": 10,
+    "roadmapOrder": 283
+  },
+  {
+    "id": 270,
+    "roomName": "Gotta Catch&#39;em All!",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/pokemon",
+    "xpReward": 10,
+    "roadmapOrder": 285
+  },
+  {
+    "id": 271,
+    "roomName": "kiba",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/kiba",
+    "xpReward": 10,
+    "roadmapOrder": 288
+  },
+  {
+    "id": 272,
+    "roomName": "Poster",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/poster",
+    "xpReward": 10,
+    "roadmapOrder": 289
+  },
+  {
+    "id": 273,
+    "roomName": "Chocolate Factory",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/chocolatefactory",
+    "xpReward": 10,
+    "roadmapOrder": 290
+  },
+  {
+    "id": 274,
+    "roomName": "Startup",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/startup",
+    "xpReward": 10,
+    "roadmapOrder": 291
+  },
+  {
+    "id": 275,
+    "roomName": "Chill Hack",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/chillhack",
+    "xpReward": 10,
+    "roadmapOrder": 292
+  },
+  {
+    "id": 276,
+    "roomName": "ColddBox: Easy",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/colddboxeasy",
+    "xpReward": 10,
+    "roadmapOrder": 293
+  },
+  {
+    "id": 277,
+    "roomName": "GLITCH",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/glitch",
+    "xpReward": 10,
+    "roadmapOrder": 294
+  },
+  {
+    "id": 278,
+    "roomName": "All in One",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/allinonemj",
+    "xpReward": 10,
+    "roadmapOrder": 295
+  },
+  {
+    "id": 279,
+    "roomName": "Archangel",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/archangel",
+    "xpReward": 10,
+    "roadmapOrder": 296
+  },
+  {
+    "id": 280,
+    "roomName": "Cyborg",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/cyborgt8",
+    "xpReward": 10,
+    "roadmapOrder": 297
+  },
+  {
+    "id": 281,
+    "roomName": "Lunizz CTF",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/lunizzctfnd",
+    "xpReward": 10,
+    "roadmapOrder": 298
+  },
+  {
+    "id": 282,
+    "roomName": "Badbyte",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/badbyte",
+    "xpReward": 10,
+    "roadmapOrder": 299
+  },
+  {
+    "id": 283,
+    "roomName": "Team",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/teamcw",
+    "xpReward": 10,
+    "roadmapOrder": 300
+  },
+  {
+    "id": 284,
+    "roomName": "VulnNet: Node",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnnetnode",
+    "xpReward": 10,
+    "roadmapOrder": 301
+  },
+  {
+    "id": 285,
+    "roomName": "VulnNet: Internal",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnnetinternal",
+    "xpReward": 10,
+    "roadmapOrder": 302
+  },
+  {
+    "id": 286,
+    "roomName": "Atlas",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/atlas",
+    "xpReward": 10,
+    "roadmapOrder": 303
+  },
+  {
+    "id": 287,
+    "roomName": "VulnNet: Roasted",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/vulnnetroasted",
+    "xpReward": 10,
+    "roadmapOrder": 304
+  },
+  {
+    "id": 288,
+    "roomName": "Cat Pictures",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/catpictures",
+    "xpReward": 10,
+    "roadmapOrder": 305
+  },
+  {
+    "id": 289,
+    "roomName": "Mustacchio",
+    "category": "CTF",
+    "path": "Easy CTF",
+    "difficulty": "Easy",
+    "url": "https://tryhackme.com/room/mustacchio",
+    "xpReward": 10,
+    "roadmapOrder": 306
+  },
+  {
+    "id": 290,
+    "roomName": "Backtrack",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/backtrack",
+    "xpReward": 25,
+    "roadmapOrder": 307
+  },
+  {
+    "id": 291,
+    "roomName": "Extracted",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/extractedroom",
+    "xpReward": 25,
+    "roadmapOrder": 308
+  },
+  {
+    "id": 292,
+    "roomName": "The London Bridge",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/thelondonbridge",
+    "xpReward": 25,
+    "roadmapOrder": 309
+  },
+  {
+    "id": 293,
+    "roomName": "Breakme",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/breakmenu",
+    "xpReward": 25,
+    "roadmapOrder": 310
+  },
+  {
+    "id": 294,
+    "roomName": "Block",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/blockroom",
+    "xpReward": 25,
+    "roadmapOrder": 311
+  },
+  {
+    "id": 295,
+    "roomName": "APIWizards Breach",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/apiwizardsbreach",
+    "xpReward": 25,
+    "roadmapOrder": 312
+  },
+  {
+    "id": 296,
+    "roomName": "New York Flankees",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/thenewyorkflankees",
+    "xpReward": 25,
+    "roadmapOrder": 313
+  },
+  {
+    "id": 297,
+    "roomName": "Airplane",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/airplane",
+    "xpReward": 25,
+    "roadmapOrder": 314
+  },
+  {
+    "id": 298,
+    "roomName": "Profiles",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/profilesroom",
+    "xpReward": 25,
+    "roadmapOrder": 315
+  },
+  {
+    "id": 299,
+    "roomName": "Clocky",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/clocky",
+    "xpReward": 25,
+    "roadmapOrder": 316
+  },
+  {
+    "id": 300,
+    "roomName": "Hack Smarter Security",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/hacksmartersecurity",
+    "xpReward": 25,
+    "roadmapOrder": 317
+  },
+  {
+    "id": 301,
+    "roomName": "Kitty",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/kitty",
+    "xpReward": 25,
+    "roadmapOrder": 318
+  },
+  {
+    "id": 302,
+    "roomName": "Umbrella",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/umbrella",
+    "xpReward": 25,
+    "roadmapOrder": 319
+  },
+  {
+    "id": 303,
+    "roomName": "AVenger",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/avenger",
+    "xpReward": 25,
+    "roadmapOrder": 320
+  },
+  {
+    "id": 304,
+    "roomName": "WhyHackMe",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/whyhackme",
+    "xpReward": 25,
+    "roadmapOrder": 321
+  },
+  {
+    "id": 305,
+    "roomName": "Stealth",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/stealth",
+    "xpReward": 25,
+    "roadmapOrder": 322
+  },
+  {
+    "id": 306,
+    "roomName": "Hunt Me I: Payment Collectors",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/paymentcollectors",
+    "xpReward": 25,
+    "roadmapOrder": 323
+  },
+  {
+    "id": 307,
+    "roomName": "Hunt Me II: Typo Squatters",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/typosquatters",
+    "xpReward": 25,
+    "roadmapOrder": 324
+  },
+  {
+    "id": 308,
+    "roomName": "Athena",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/4th3n4",
+    "xpReward": 25,
+    "roadmapOrder": 325
+  },
+  {
+    "id": 309,
+    "roomName": "Crylo",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/crylo4a",
+    "xpReward": 25,
+    "roadmapOrder": 326
+  },
+  {
+    "id": 310,
+    "roomName": "Forgotten Implant",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/forgottenimplant",
+    "xpReward": 25,
+    "roadmapOrder": 327
+  },
+  {
+    "id": 311,
+    "roomName": "Race Conditions",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/raceconditions",
+    "xpReward": 25,
+    "roadmapOrder": 328
+  },
+  {
+    "id": 312,
+    "roomName": "Weasel",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/weasel",
+    "xpReward": 25,
+    "roadmapOrder": 329
+  },
+  {
+    "id": 313,
+    "roomName": "Prioritise",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/prioritise",
+    "xpReward": 25,
+    "roadmapOrder": 330
+  },
+  {
+    "id": 314,
+    "roomName": "Boogeyman 1",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/boogeyman1",
+    "xpReward": 25,
+    "roadmapOrder": 331
+  },
+  {
+    "id": 315,
+    "roomName": "Mr Robot CTF",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/mrrobot",
+    "xpReward": 25,
+    "roadmapOrder": 332
+  },
+  {
+    "id": 316,
+    "roomName": "Unattended",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/unattended",
+    "xpReward": 25,
+    "roadmapOrder": 333
+  },
+  {
+    "id": 317,
+    "roomName": "GoldenEye",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/goldeneye",
+    "xpReward": 25,
+    "roadmapOrder": 334
+  },
+  {
+    "id": 318,
+    "roomName": "StuxCTF",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/stuxctf",
+    "xpReward": 25,
+    "roadmapOrder": 335
+  },
+  {
+    "id": 319,
+    "roomName": "Boiler CTF",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/boilerctf2",
+    "xpReward": 25,
+    "roadmapOrder": 336
+  },
+  {
+    "id": 320,
+    "roomName": "HA Joker CTF",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/jokerctf",
+    "xpReward": 25,
+    "roadmapOrder": 337
+  },
+  {
+    "id": 321,
+    "roomName": "Biohazard",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/biohazard",
+    "xpReward": 25,
+    "roadmapOrder": 338
+  },
+  {
+    "id": 322,
+    "roomName": "Break it",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/breakit",
+    "xpReward": 25,
+    "roadmapOrder": 339
+  },
+  {
+    "id": 323,
+    "roomName": "Willow",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/willow",
+    "xpReward": 25,
+    "roadmapOrder": 340
+  },
+  {
+    "id": 324,
+    "roomName": "The Marketplace",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/marketplace",
+    "xpReward": 25,
+    "roadmapOrder": 341
+  },
+  {
+    "id": 325,
+    "roomName": "Nax",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/nax",
+    "xpReward": 25,
+    "roadmapOrder": 342
+  },
+  {
+    "id": 326,
+    "roomName": "Mindgames",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/mindgames",
+    "xpReward": 25,
+    "roadmapOrder": 343
+  },
+  {
+    "id": 327,
+    "roomName": "Anonymous",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/anonymous",
+    "xpReward": 25,
+    "roadmapOrder": 344
+  },
+  {
+    "id": 328,
+    "roomName": "Blog",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/blog",
+    "xpReward": 25,
+    "roadmapOrder": 345
+  },
+  {
+    "id": 329,
+    "roomName": "Wonderland",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/wonderland",
+    "xpReward": 25,
+    "roadmapOrder": 346
+  },
+  {
+    "id": 330,
+    "roomName": "0day",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/0day",
+    "xpReward": 25,
+    "roadmapOrder": 347
+  },
+  {
+    "id": 331,
+    "roomName": "CTF collection Vol.2",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/ctfcollectionvol2",
+    "xpReward": 25,
+    "roadmapOrder": 349
+  },
+  {
+    "id": 332,
+    "roomName": "CMesS",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/cmess",
+    "xpReward": 25,
+    "roadmapOrder": 350
+  },
+  {
+    "id": 333,
+    "roomName": "Deja Vu",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/dejavu",
+    "xpReward": 25,
+    "roadmapOrder": 351
+  },
+  {
+    "id": 334,
+    "roomName": "hackerNote",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/hackernote",
+    "xpReward": 25,
+    "roadmapOrder": 352
+  },
+  {
+    "id": 335,
+    "roomName": "dogcat",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/dogcat",
+    "xpReward": 25,
+    "roadmapOrder": 353
+  },
+  {
+    "id": 336,
+    "roomName": "ConvertMyVideo",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/convertmyvideo",
+    "xpReward": 25,
+    "roadmapOrder": 354
+  },
+  {
+    "id": 337,
+    "roomName": "KoTH Hackers",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/kothhackers",
+    "xpReward": 25,
+    "roadmapOrder": 355
+  },
+  {
+    "id": 338,
+    "roomName": "Revenge",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/revenge",
+    "xpReward": 25,
+    "roadmapOrder": 356
+  },
+  {
+    "id": 339,
+    "roomName": "harder",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/harder",
+    "xpReward": 25,
+    "roadmapOrder": 357
+  },
+  {
+    "id": 340,
+    "roomName": "HaskHell",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/haskhell",
+    "xpReward": 25,
+    "roadmapOrder": 358
+  },
+  {
+    "id": 341,
+    "roomName": "Undiscovered",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/undiscoveredup",
+    "xpReward": 25,
+    "roadmapOrder": 359
+  },
+  {
+    "id": 342,
+    "roomName": "Break Out The Cage",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/breakoutthecage1",
+    "xpReward": 25,
+    "roadmapOrder": 360
+  },
+  {
+    "id": 343,
+    "roomName": "The Impossible Challenge",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/theimpossiblechallenge",
+    "xpReward": 25,
+    "roadmapOrder": 361
+  },
+  {
+    "id": 344,
+    "roomName": "Looking Glass",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/lookingglass",
+    "xpReward": 25,
+    "roadmapOrder": 362
+  },
+  {
+    "id": 345,
+    "roomName": "Recovery",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/recovery",
+    "xpReward": 25,
+    "roadmapOrder": 363
+  },
+  {
+    "id": 346,
+    "roomName": "Relevant",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/relevant",
+    "xpReward": 25,
+    "roadmapOrder": 364
+  },
+  {
+    "id": 347,
+    "roomName": "Ghizer",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/ghizerctf",
+    "xpReward": 25,
+    "roadmapOrder": 365
+  },
+  {
+    "id": 348,
+    "roomName": "Mnemonic",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/mnemonic",
+    "xpReward": 25,
+    "roadmapOrder": 366
+  },
+  {
+    "id": 349,
+    "roomName": "WWBuddy",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/wwbuddy",
+    "xpReward": 25,
+    "roadmapOrder": 367
+  },
+  {
+    "id": 350,
+    "roomName": "The Blob Blog",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/theblobblog",
+    "xpReward": 25,
+    "roadmapOrder": 368
+  },
+  {
+    "id": 351,
+    "roomName": "Cooctus Stories",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/cooctusadventures",
+    "xpReward": 25,
+    "roadmapOrder": 369
+  },
+  {
+    "id": 352,
+    "roomName": "One Piece",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/ctfonepiece65",
+    "xpReward": 25,
+    "roadmapOrder": 370
+  },
+  {
+    "id": 353,
+    "roomName": "toc2",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/toc2",
+    "xpReward": 25,
+    "roadmapOrder": 371
+  },
+  {
+    "id": 354,
+    "roomName": "NerdHerd",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/nerdherd",
+    "xpReward": 25,
+    "roadmapOrder": 372
+  },
+  {
+    "id": 355,
+    "roomName": "Kubernetes Chall TDI 2020",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/kuberneteschalltdi2020",
+    "xpReward": 25,
+    "roadmapOrder": 373
+  },
+  {
+    "id": 356,
+    "roomName": "The Server From Hell",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/theserverfromhell",
+    "xpReward": 25,
+    "roadmapOrder": 374
+  },
+  {
+    "id": 357,
+    "roomName": "Jacob the Boss",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/jacobtheboss",
+    "xpReward": 25,
+    "roadmapOrder": 375
+  },
+  {
+    "id": 358,
+    "roomName": "Unbaked Pie",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/unbakedpie",
+    "xpReward": 25,
+    "roadmapOrder": 376
+  },
+  {
+    "id": 359,
+    "roomName": "Bookstore",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/bookstoreoc",
+    "xpReward": 25,
+    "roadmapOrder": 377
+  },
+  {
+    "id": 360,
+    "roomName": "Overpass 3 - Hosting",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/overpass3hosting",
+    "xpReward": 25,
+    "roadmapOrder": 378
+  },
+  {
+    "id": 361,
+    "roomName": "battery",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/battery",
+    "xpReward": 25,
+    "roadmapOrder": 379
+  },
+  {
+    "id": 362,
+    "roomName": "Madeye&#39;s Castle",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/madeyescastle",
+    "xpReward": 25,
+    "roadmapOrder": 380
+  },
+  {
+    "id": 363,
+    "roomName": "En-pass",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/enpass",
+    "xpReward": 25,
+    "roadmapOrder": 381
+  },
+  {
+    "id": 364,
+    "roomName": "Sustah",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/sustah",
+    "xpReward": 25,
+    "roadmapOrder": 382
+  },
+  {
+    "id": 365,
+    "roomName": "KaffeeSec - SoMeSINT",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/somesint",
+    "xpReward": 25,
+    "roadmapOrder": 383
+  },
+  {
+    "id": 366,
+    "roomName": "Tokyo Ghoul",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/tokyoghoul666",
+    "xpReward": 25,
+    "roadmapOrder": 384
+  },
+  {
+    "id": 367,
+    "roomName": "Watcher",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/watcher",
+    "xpReward": 25,
+    "roadmapOrder": 385
+  },
+  {
+    "id": 368,
+    "roomName": "broker",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/broker",
+    "xpReward": 25,
+    "roadmapOrder": 386
+  },
+  {
+    "id": 369,
+    "roomName": "Inferno",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/inferno",
+    "xpReward": 25,
+    "roadmapOrder": 387
+  },
+  {
+    "id": 370,
+    "roomName": "VulnNet: dotpy",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/vulnnetdotpy",
+    "xpReward": 25,
+    "roadmapOrder": 388
+  },
+  {
+    "id": 371,
+    "roomName": "Wekor",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/wekorra",
+    "xpReward": 25,
+    "roadmapOrder": 389
+  },
+  {
+    "id": 372,
+    "roomName": "pyLon",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/pylonzf",
+    "xpReward": 25,
+    "roadmapOrder": 390
+  },
+  {
+    "id": 373,
+    "roomName": "The Great Escape",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/thegreatescape",
+    "xpReward": 25,
+    "roadmapOrder": 391
+  },
+  {
+    "id": 374,
+    "roomName": "SafeZone",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/safezone",
+    "xpReward": 25,
+    "roadmapOrder": 392
+  },
+  {
+    "id": 375,
+    "roomName": "NahamStore",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/nahamstore",
+    "xpReward": 25,
+    "roadmapOrder": 393
+  },
+  {
+    "id": 376,
+    "roomName": "Sweettooth Inc.",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/sweettoothinc",
+    "xpReward": 25,
+    "roadmapOrder": 394
+  },
+  {
+    "id": 377,
+    "roomName": "Red Team OPSEC",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/opsec",
+    "xpReward": 25,
+    "roadmapOrder": 395
+  },
+  {
+    "id": 378,
+    "roomName": "CMSpit",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/cmspit",
+    "xpReward": 25,
+    "roadmapOrder": 396
+  },
+  {
+    "id": 379,
+    "roomName": "Super-Spam",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/superspamr",
+    "xpReward": 25,
+    "roadmapOrder": 397
+  },
+  {
+    "id": 380,
+    "roomName": "That&#39;s The Ticket",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/thatstheticket",
+    "xpReward": 25,
+    "roadmapOrder": 398
+  },
+  {
+    "id": 381,
+    "roomName": "Debug",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/debug",
+    "xpReward": 25,
+    "roadmapOrder": 399
+  },
+  {
+    "id": 382,
+    "roomName": "Red Stone One Carat",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/redstoneonecarat",
+    "xpReward": 25,
+    "roadmapOrder": 400
+  },
+  {
+    "id": 383,
+    "roomName": "Cold VVars",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/coldvvars",
+    "xpReward": 25,
+    "roadmapOrder": 401
+  },
+  {
+    "id": 384,
+    "roomName": "Metamorphosis",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/metamorphosis",
+    "xpReward": 25,
+    "roadmapOrder": 402
+  },
+  {
+    "id": 385,
+    "roomName": "SQHell",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/sqhell",
+    "xpReward": 25,
+    "roadmapOrder": 403
+  },
+  {
+    "id": 386,
+    "roomName": "Fortress",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/fortress",
+    "xpReward": 25,
+    "roadmapOrder": 404
+  },
+  {
+    "id": 387,
+    "roomName": "CyberCrafted",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/cybercrafted",
+    "xpReward": 25,
+    "roadmapOrder": 405
+  },
+  {
+    "id": 388,
+    "roomName": "Road",
+    "category": "CTF",
+    "path": "Medium CTF",
+    "difficulty": "Medium",
+    "url": "https://tryhackme.com/room/road",
+    "xpReward": 25,
+    "roadmapOrder": 406
+  },
+  {
+    "id": 389,
+    "roomName": "CERTain Doom",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/certaindoom",
+    "xpReward": 50,
+    "roadmapOrder": 407
+  },
+  {
+    "id": 390,
+    "roomName": "Capture Returns",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/capturereturns",
+    "xpReward": 50,
+    "roadmapOrder": 408
+  },
+  {
+    "id": 391,
+    "roomName": "Chrome",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/chrome",
+    "xpReward": 50,
+    "roadmapOrder": 409
+  },
+  {
+    "id": 392,
+    "roomName": "Reset",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/resetui",
+    "xpReward": 50,
+    "roadmapOrder": 410
+  },
+  {
+    "id": 393,
+    "roomName": "Motunui",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/motunui",
+    "xpReward": 50,
+    "roadmapOrder": 411
+  },
+  {
+    "id": 394,
+    "roomName": "Spring",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/spring",
+    "xpReward": 50,
+    "roadmapOrder": 412
+  },
+  {
+    "id": 395,
+    "roomName": "Brainpan 1",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/brainpan",
+    "xpReward": 50,
+    "roadmapOrder": 413
+  },
+  {
+    "id": 396,
+    "roomName": "Borderlands",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/borderlands",
+    "xpReward": 50,
+    "roadmapOrder": 414
+  },
+  {
+    "id": 397,
+    "roomName": "hc0n Christmas CTF",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/hc0nchristmasctf",
+    "xpReward": 50,
+    "roadmapOrder": 415
+  },
+  {
+    "id": 398,
+    "roomName": "Daily Bugle",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/dailybugle",
+    "xpReward": 50,
+    "roadmapOrder": 416
+  },
+  {
+    "id": 399,
+    "roomName": "Retro",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/retro",
+    "xpReward": 50,
+    "roadmapOrder": 417
+  },
+  {
+    "id": 400,
+    "roomName": "Jeff",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/jeff",
+    "xpReward": 50,
+    "roadmapOrder": 418
+  },
+  {
+    "id": 401,
+    "roomName": "Racetrack Bank",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/racetrackbank",
+    "xpReward": 50,
+    "roadmapOrder": 419
+  },
+  {
+    "id": 402,
+    "roomName": "Dave&#39;s Blog",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/davesblog",
+    "xpReward": 50,
+    "roadmapOrder": 420
+  },
+  {
+    "id": 403,
+    "roomName": "CherryBlossom",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/cherryblossom",
+    "xpReward": 50,
+    "roadmapOrder": 421
+  },
+  {
+    "id": 404,
+    "roomName": "Iron Corp",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/ironcorp",
+    "xpReward": 50,
+    "roadmapOrder": 423
+  },
+  {
+    "id": 405,
+    "roomName": "Carpe Diem 1",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/carpediem1",
+    "xpReward": 50,
+    "roadmapOrder": 424
+  },
+  {
+    "id": 406,
+    "roomName": "Ra",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/ra",
+    "xpReward": 50,
+    "roadmapOrder": 425
+  },
+  {
+    "id": 407,
+    "roomName": "Year of the Fox",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/yotf",
+    "xpReward": 50,
+    "roadmapOrder": 426
+  },
+  {
+    "id": 408,
+    "roomName": "For Business Reasons",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/forbusinessreasons",
+    "xpReward": 50,
+    "roadmapOrder": 427
+  },
+  {
+    "id": 409,
+    "roomName": "Anonymous Playground",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/anonymousplayground",
+    "xpReward": 50,
+    "roadmapOrder": 428
+  },
+  {
+    "id": 410,
+    "roomName": "Misguided Ghosts",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/misguidedghosts",
+    "xpReward": 50,
+    "roadmapOrder": 429
+  },
+  {
+    "id": 411,
+    "roomName": "Theseus",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/theseus",
+    "xpReward": 50,
+    "roadmapOrder": 430
+  },
+  {
+    "id": 412,
+    "roomName": "Internal",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/internal",
+    "xpReward": 50,
+    "roadmapOrder": 431
+  },
+  {
+    "id": 413,
+    "roomName": "Year of the Dog",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/yearofthedog",
+    "xpReward": 50,
+    "roadmapOrder": 432
+  },
+  {
+    "id": 414,
+    "roomName": "You&#39;re in a cave",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/inacave",
+    "xpReward": 50,
+    "roadmapOrder": 433
+  },
+  {
+    "id": 415,
+    "roomName": "Year of the Owl",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/yearoftheowl",
+    "xpReward": 50,
+    "roadmapOrder": 434
+  },
+  {
+    "id": 416,
+    "roomName": "Year of the Pig",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/yearofthepig",
+    "xpReward": 50,
+    "roadmapOrder": 435
+  },
+  {
+    "id": 417,
+    "roomName": "envizon",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/envizon",
+    "xpReward": 50,
+    "roadmapOrder": 436
+  },
+  {
+    "id": 418,
+    "roomName": "GameBuzz",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/gamebuzz",
+    "xpReward": 50,
+    "roadmapOrder": 437
+  },
+  {
+    "id": 419,
+    "roomName": "Fusion Corp",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/fusioncorp",
+    "xpReward": 50,
+    "roadmapOrder": 438
+  },
+  {
+    "id": 420,
+    "roomName": "Crocc Crew",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/crocccrew",
+    "xpReward": 50,
+    "roadmapOrder": 439
+  },
+  {
+    "id": 421,
+    "roomName": "Uranium CTF",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/uranium",
+    "xpReward": 50,
+    "roadmapOrder": 440
+  },
+  {
+    "id": 422,
+    "roomName": "Year of the Jellyfish",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/yearofthejellyfish",
+    "xpReward": 50,
+    "roadmapOrder": 441
+  },
+  {
+    "id": 423,
+    "roomName": "Rocket",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/rocket",
+    "xpReward": 50,
+    "roadmapOrder": 442
+  },
+  {
+    "id": 424,
+    "roomName": "Squid Game",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/squidgameroom",
+    "xpReward": 50,
+    "roadmapOrder": 443
+  },
+  {
+    "id": 425,
+    "roomName": "EnterPrize",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/enterprize",
+    "xpReward": 50,
+    "roadmapOrder": 444
+  },
+  {
+    "id": 426,
+    "roomName": "Different CTF",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adana",
+    "xpReward": 50,
+    "roadmapOrder": 445
+  },
+  {
+    "id": 427,
+    "roomName": "VulnNet: dotjar",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/vulnnetdotjar",
+    "xpReward": 50,
+    "roadmapOrder": 446
+  },
+  {
+    "id": 428,
+    "roomName": "M4tr1x: Exit Denied",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/m4tr1xexitdenied",
+    "xpReward": 50,
+    "roadmapOrder": 447
+  },
+  {
+    "id": 429,
+    "roomName": "Shaker",
+    "category": "CTF",
+    "path": "Hard CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/shaker",
+    "xpReward": 50,
+    "roadmapOrder": 448
+  },
+  {
+    "id": 430,
+    "roomName": "Frosteau Busy with Vim",
+    "category": "CTF",
+    "path": "Insane CTF",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/busyvimfrosteau",
+    "xpReward": 50,
+    "roadmapOrder": 449
+  },
+  {
+    "id": 431,
+    "roomName": "PaperCut: CVE-2023-27350",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/papercut",
+    "xpReward": 50,
+    "roadmapOrder": 450
+  },
+  {
+    "id": 432,
+    "roomName": "Moniker Link (CVE-2024-21413)",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/monikerlink",
+    "xpReward": 50,
+    "roadmapOrder": 451
+  },
+  {
+    "id": 433,
+    "roomName": "Confluence CVE-2023-22515",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/confluence202322515",
+    "xpReward": 50,
+    "roadmapOrder": 452
+  },
+  {
+    "id": 434,
+    "roomName": "GitLab CVE-2023-7028",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/gitlabcve20237028",
+    "xpReward": 50,
+    "roadmapOrder": 453
+  },
+  {
+    "id": 435,
+    "roomName": "Cactus",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/cactus",
+    "xpReward": 50,
+    "roadmapOrder": 454
+  },
+  {
+    "id": 436,
+    "roomName": "Looney Tunables",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/looneytunes",
+    "xpReward": 50,
+    "roadmapOrder": 455
+  },
+  {
+    "id": 437,
+    "roomName": "Threat Intel & Containment",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/intelcreationandcontainment",
+    "xpReward": 50,
+    "roadmapOrder": 456
+  },
+  {
+    "id": 438,
+    "roomName": "CVE-2023-38408",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/cve202338408",
+    "xpReward": 50,
+    "roadmapOrder": 457
+  },
+  {
+    "id": 439,
+    "roomName": "Introduction to Django",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/django",
+    "xpReward": 50,
+    "roadmapOrder": 458
+  },
+  {
+    "id": 440,
+    "roomName": "Git Happens",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/githappens",
+    "xpReward": 50,
+    "roadmapOrder": 459
+  },
+  {
+    "id": 441,
+    "roomName": "Meltdown Explained",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/meltdownexplained",
+    "xpReward": 50,
+    "roadmapOrder": 460
+  },
+  {
+    "id": 442,
+    "roomName": "Splunk",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/bpsplunk",
+    "xpReward": 50,
+    "roadmapOrder": 461
+  },
+  {
+    "id": 443,
+    "roomName": "Linux Backdoors",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/linuxbackdoors",
+    "xpReward": 50,
+    "roadmapOrder": 462
+  },
+  {
+    "id": 444,
+    "roomName": "Jupyter 101",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/jupyter101",
+    "xpReward": 50,
+    "roadmapOrder": 463
+  },
+  {
+    "id": 445,
+    "roomName": "Geolocating Images",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/geolocatingimages",
+    "xpReward": 50,
+    "roadmapOrder": 464
+  },
+  {
+    "id": 446,
+    "roomName": "Tor",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/torforbeginners",
+    "xpReward": 50,
+    "roadmapOrder": 465
+  },
+  {
+    "id": 447,
+    "roomName": "tomghost",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/tomghost",
+    "xpReward": 50,
+    "roadmapOrder": 466
+  },
+  {
+    "id": 448,
+    "roomName": "DLL HIJACKING",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/dllhijacking",
+    "xpReward": 50,
+    "roadmapOrder": 467
+  },
+  {
+    "id": 449,
+    "roomName": "Intro to IoT Pentesting",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/iotintro",
+    "xpReward": 50,
+    "roadmapOrder": 468
+  },
+  {
+    "id": 450,
+    "roomName": "Attacking ICS Plant #1",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/attackingics1",
+    "xpReward": 50,
+    "roadmapOrder": 469
+  },
+  {
+    "id": 451,
+    "roomName": "Attacking ICS Plant #2",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/attackingics2",
+    "xpReward": 50,
+    "roadmapOrder": 470
+  },
+  {
+    "id": 452,
+    "roomName": "Printer Hacking 101",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/printerhacking101",
+    "xpReward": 50,
+    "roadmapOrder": 471
+  },
+  {
+    "id": 453,
+    "roomName": "DNS Manipulation",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/dnsmanipulation",
+    "xpReward": 50,
+    "roadmapOrder": 472
+  },
+  {
+    "id": 454,
+    "roomName": "Introduction to Flask",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/flask",
+    "xpReward": 50,
+    "roadmapOrder": 473
+  },
+  {
+    "id": 455,
+    "roomName": "MITRE",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/mitre",
+    "xpReward": 50,
+    "roadmapOrder": 474
+  },
+  {
+    "id": 456,
+    "roomName": "magician",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/magician",
+    "xpReward": 50,
+    "roadmapOrder": 475
+  },
+  {
+    "id": 457,
+    "roomName": "JPGChat",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/jpgchat",
+    "xpReward": 50,
+    "roadmapOrder": 476
+  },
+  {
+    "id": 458,
+    "roomName": "Baron Samedit",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/sudovulnssamedit",
+    "xpReward": 50,
+    "roadmapOrder": 477
+  },
+  {
+    "id": 459,
+    "roomName": "CVE-2021-41773/42013",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/cve202141773",
+    "xpReward": 50,
+    "roadmapOrder": 478
+  },
+  {
+    "id": 460,
+    "roomName": "Binary Heaven",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/binaryheaven",
+    "xpReward": 50,
+    "roadmapOrder": 479
+  },
+  {
+    "id": 461,
+    "roomName": "Git and Crumpets",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/gitandcrumpets",
+    "xpReward": 50,
+    "roadmapOrder": 480
+  },
+  {
+    "id": 462,
+    "roomName": "Polkit: CVE-2021-3560",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/polkit",
+    "xpReward": 50,
+    "roadmapOrder": 481
+  },
+  {
+    "id": 463,
+    "roomName": "Hip Flask",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/hipflask",
+    "xpReward": 50,
+    "roadmapOrder": 482
+  },
+  {
+    "id": 464,
+    "roomName": "Bypass Disable Functions",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/bypassdisablefunctions",
+    "xpReward": 50,
+    "roadmapOrder": 483
+  },
+  {
+    "id": 465,
+    "roomName": "Wordpress: CVE-2021-29447",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/wordpresscve202129447",
+    "xpReward": 50,
+    "roadmapOrder": 484
+  },
+  {
+    "id": 466,
+    "roomName": "Linux Function Hooking",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/linuxfunctionhooking",
+    "xpReward": 50,
+    "roadmapOrder": 485
+  },
+  {
+    "id": 467,
+    "roomName": "REvil Corp",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/revilcorp",
+    "xpReward": 50,
+    "roadmapOrder": 486
+  },
+  {
+    "id": 468,
+    "roomName": "Solar, exploiting log4j",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/solar",
+    "xpReward": 50,
+    "roadmapOrder": 489
+  },
+  {
+    "id": 469,
+    "roomName": "Conti",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/contiransomwarehgh",
+    "xpReward": 50,
+    "roadmapOrder": 490
+  },
+  {
+    "id": 470,
+    "roomName": "Dirty Pipe: CVE-2022-0847",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/dirtypipe",
+    "xpReward": 50,
+    "roadmapOrder": 491
+  },
+  {
+    "id": 471,
+    "roomName": "The find command",
+    "category": "General",
+    "path": "Misc",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/thefindcommand",
+    "xpReward": 50,
+    "roadmapOrder": 492
+  },
+  {
+    "id": 472,
+    "roomName": "25 Days of Cyber Security",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/learncyberin25days",
+    "xpReward": 50,
+    "roadmapOrder": 493
+  },
+  {
+    "id": 473,
+    "roomName": "Advent of Cyber 1 [2019]",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/25daysofchristmas",
+    "xpReward": 50,
+    "roadmapOrder": 494
+  },
+  {
+    "id": 474,
+    "roomName": "Advent of Cyber 2 [2020]",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber2",
+    "xpReward": 50,
+    "roadmapOrder": 495
+  },
+  {
+    "id": 475,
+    "roomName": "Advent of Cyber 3 (2021)",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber3",
+    "xpReward": 50,
+    "roadmapOrder": 496
+  },
+  {
+    "id": 476,
+    "roomName": "Advent of Cyber 2022",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber4",
+    "xpReward": 50,
+    "roadmapOrder": 497
+  },
+  {
+    "id": 477,
+    "roomName": "Advent of Cyber 2023",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber2023",
+    "xpReward": 50,
+    "roadmapOrder": 498
+  },
+  {
+    "id": 478,
+    "roomName": "Advent of Cyber 2024",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber2024",
+    "xpReward": 50,
+    "roadmapOrder": 499
+  },
+  {
+    "id": 479,
+    "roomName": "Advent of Cyber '23 Side Quest",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/adventofcyber23sidequest",
+    "xpReward": 50,
+    "roadmapOrder": 500
+  },
+  {
+    "id": 480,
+    "roomName": "Cyber Scotland 2021",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/cyberweek2021",
+    "xpReward": 50,
+    "roadmapOrder": 501
+  },
+  {
+    "id": 481,
+    "roomName": "Hacker of the Hill #1",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/hackerofthehill",
+    "xpReward": 50,
+    "roadmapOrder": 502
+  },
+  {
+    "id": 482,
+    "roomName": "Learn and win prizes",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/tickets1",
+    "xpReward": 50,
+    "roadmapOrder": 503
+  },
+  {
+    "id": 483,
+    "roomName": "Learn and win prizes #2",
+    "category": "General",
+    "path": "Special Events",
+    "difficulty": "Hard",
+    "url": "https://tryhackme.com/room/tickets2",
+    "xpReward": 50,
+    "roadmapOrder": 504
+  }
+]
