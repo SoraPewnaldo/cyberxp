@@ -111,14 +111,14 @@ export const updateRoom = (req, res) => {
     `).run(
       updated.roomName, updated.category, updated.path, updated.difficulty,
       updated.url, updated.status, updated.xpReward, updated.roadmapOrder,
-      req.params.id
+      Number(req.params.id)
     );
 
-    const updatedRoom = db.prepare('SELECT * FROM rooms WHERE id = ?').get(req.params.id);
+    const updatedRoom = db.prepare('SELECT * FROM rooms WHERE id = ?').get(Number(req.params.id));
     res.json(updatedRoom);
   } catch (error) {
     console.error('Update room error:', error);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: error.message });
   }
 };
 
