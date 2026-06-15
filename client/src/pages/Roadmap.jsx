@@ -211,17 +211,48 @@ export default function Roadmap() {
                 ({pathRooms.filter((r) => r.status === 'Completed').length}/{pathRooms.length})
               </span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {pathRooms.map((room) => (
-                <RoomCard
-                  key={room.id || room._id}
-                  room={room}
-                  onEdit={handleEdit}
-                  onDelete={handleDelete}
-                  onComplete={handleComplete}
-                  onStart={handleStart}
-                />
-              ))}
+            <div className="flex flex-col gap-0 relative">
+              {pathRooms.map((room, index) => {
+                const isLast = index === pathRooms.length - 1;
+                // Calculate if locked
+                let isLocked = false;
+                if (index > 0 && room.status === 'Not Started') {
+                  const previousRooms = pathRooms.slice(0, index);
+                  const hasUncompletedPredecessor = previousRooms.some(r => r.status !== 'Completed');
+                  if (hasUncompletedPredecessor) {
+                    isLocked = true;
+                  }
+                }
+
+                return (
+                  <div key={room.id || room._id} className="relative pl-14 flex items-start group">
+                    {/* Connection Lines */}
+                    <div className="absolute left-6 top-0 bottom-0 w-6 flex justify-center">
+                      {/* Vertical line */}
+                      <div className={`w-[2px] bg-white/20 absolute ${
+                        index === 0 ? 'top-[40px]' : 'top-0'
+                      } ${
+                        isLast ? 'bottom-[calc(100%-40px)]' : 'bottom-0'
+                      }`} />
+                      {/* Horizontal line */}
+                      <div className="h-[2px] w-4 bg-white/20 absolute top-[40px] left-[50%]" />
+                    </div>
+
+                    {/* Room Card */}
+                    <div className="flex-1 pb-6 max-w-3xl">
+                      <RoomCard
+                        key={room.id || room._id}
+                        room={room}
+                        isLocked={isLocked}
+                        onEdit={handleEdit}
+                        onDelete={handleDelete}
+                        onComplete={handleComplete}
+                        onStart={handleStart}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))

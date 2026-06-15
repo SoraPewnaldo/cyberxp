@@ -1,8 +1,8 @@
-export default function RoomCard({ room, onEdit, onDelete, onComplete, onStart }) {
+export default function RoomCard({ room, isLocked, onEdit, onDelete, onComplete, onStart }) {
   const xpMap = { Easy: 10, Medium: 25, Hard: 50 };
 
   return (
-    <div className="retro-card flex flex-col gap-3">
+    <div className={`retro-card flex flex-col gap-3 transition-opacity duration-300 ${isLocked ? 'opacity-60 grayscale-[10%]' : ''}`}>
       {/* Header */}
       <div className="flex items-start justify-between gap-3 overflow-hidden">
         <div className="min-w-0 flex-1 group cursor-default">
@@ -18,7 +18,13 @@ export default function RoomCard({ room, onEdit, onDelete, onComplete, onStart }
           </div>
           <p className="text-sm text-gray-400 mt-1 uppercase font-bold">{room.path || 'General'}</p>
         </div>
-        <span className="retro-badge-inverted font-bold text-xs px-2 py-1 uppercase border-2 shrink-0">{room.status}</span>
+        <span className={`retro-badge-inverted font-bold text-xs px-2 py-1 uppercase border-2 shrink-0 ${
+          isLocked ? 'border-gray-600 text-gray-400' : 
+          room.status === 'Completed' ? 'border-[var(--color-cyber-primary)] text-[var(--color-cyber-primary)]' : 
+          room.status === 'In Progress' ? 'border-amber-500 text-amber-500' : 'border-white text-white'
+        }`}>
+          {isLocked ? '🔒 Locked' : room.status}
+        </span>
       </div>
 
       {/* Tags */}
@@ -29,7 +35,7 @@ export default function RoomCard({ room, onEdit, onDelete, onComplete, onStart }
       </div>
 
       {/* URL */}
-      {room.url && (
+      {room.url && !isLocked && (
         <a
           href={room.url}
           target="_blank"
@@ -39,28 +45,42 @@ export default function RoomCard({ room, onEdit, onDelete, onComplete, onStart }
           {room.url}
         </a>
       )}
+      {room.url && isLocked && (
+        <span className="text-xs text-gray-500 truncate block mt-2 cursor-not-allowed">
+          {room.url}
+        </span>
+      )}
 
       {/* Actions */}
       <div className="flex items-center gap-2 mt-auto pt-4 border-t border-[var(--color-cyber-border)]">
         {room.status === 'Not Started' && (
-          <button 
-            onClick={() => {
-              onStart(room.id || room._id);
-              if (room.url) {
-                window.open(room.url, '_blank', 'noopener,noreferrer');
-              }
-            }} 
-            className="retro-btn text-xs py-1.5 px-3"
-          >
-            START
-          </button>
+          isLocked ? (
+            <button 
+              disabled
+              className="retro-btn-outline text-xs py-1.5 px-3 opacity-50 cursor-not-allowed !border-gray-600 !text-gray-500"
+            >
+              🔒 LOCKED
+            </button>
+          ) : (
+            <button 
+              onClick={() => {
+                onStart(room.id || room._id);
+                if (room.url) {
+                  window.open(room.url, '_blank', 'noopener,noreferrer');
+                }
+              }} 
+              className="retro-btn text-xs py-1.5 px-3"
+            >
+              START
+            </button>
+          )
         )}
         {room.status === 'In Progress' && (
           <button onClick={() => onComplete(room.id || room._id)} className="retro-btn text-xs py-1.5 px-3">
             COMPLETE
           </button>
         )}
-        {room.status !== 'Completed' && (
+        {!isLocked && room.status !== 'Completed' && (
           <button onClick={() => onEdit(room)} className="retro-btn-outline text-xs py-1.5 px-3">
             EDIT
           </button>
