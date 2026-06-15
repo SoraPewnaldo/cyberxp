@@ -97,6 +97,40 @@ npm run dev
 
 ---
 
+## 🌐 Hosting & Deployment Guide
+
+As a full-stack application (statically served frontend + dynamic backend server with SQLite), deployment is divided into two parts:
+
+### 1. Host Frontend (React) on GitHub Pages
+You can host the React client for free directly on GitHub Pages.
+
+1.  **Configure API URL**: In `client/src/api/axios.js`, ensure the Axios base URL points to your deployed backend URL instead of `http://localhost:5000`.
+2.  **Add Homepage**: Add `"homepage": "https://<your-username>.github.io/cyberxp"` to your `client/package.json`.
+3.  **Install gh-pages**:
+    ```bash
+    cd client
+    npm install gh-pages --save-dev
+    ```
+4.  **Add Deploy Scripts**: Add these scripts in `client/package.json`:
+    ```json
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+    ```
+5.  **Deploy**: Run `npm run deploy` inside the `client` directory to build and publish your app!
+
+---
+
+### 2. Host Backend (Express + SQLite)
+Since the backend uses a local SQLite file (`server/data/cyberxp.db`) to store progress, hosting requires a platform with **persistent disk storage**:
+
+*   **Render** / **Railway** / **Fly.io**: 
+    1. Deploy the `server` directory as a Web Service.
+    2. Add a persistent **Disk Volume** mounted at `/opt/render/project/src/server/data` (or your service's equivalent database path).
+    3. Set the environment variable `PORT` to default config.
+*   **VPS (Virtual Private Server)**: You can clone the repository to a VPS (e.g. DigitalOcean, Linode), configure `pm2` to run the server in the background, and use Nginx to reverse proxy port `5000`.
+
+---
+
 ## 🤝 Credits
 
 The list of TryHackMe rooms, paths, and URLs used in this application is seeded from the excellent open-source curation repository:
