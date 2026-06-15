@@ -1,16 +1,76 @@
 import express from 'express';
-import db from '../config/db.js';
+import pool from '../config/db.js';
 
 const router = express.Router();
 
+const mapSettings = (s) => {
+  if (!s) return null;
+  return {
+    id: s.id,
+    displayName: s.displayname,
+    avatar: s.avatar,
+    xp: s.xp,
+    streak: s.streak,
+    lastCompletionDate: s.lastcompletiondate,
+    appVersion: s.appversion,
+    seeded: s.seeded,
+    createdAt: s.createdat,
+    updatedAt: s.updatedat
+  };
+};
+
+const mapRoom = (r) => {
+  if (!r) return null;
+  return {
+    id: r.id,
+    roomName: r.roomname,
+    category: r.category,
+    path: r.path,
+    difficulty: r.difficulty,
+    url: r.url,
+    status: r.status,
+    xpReward: r.xpreward,
+    priorityScore: r.priorityscore,
+    roadmapOrder: r.roadmaporder,
+    createdAt: r.createdat
+  };
+};
+
+const mapAchievement = (a) => {
+  if (!a) return null;
+  return {
+    id: a.id,
+    title: a.title,
+    description: a.description,
+    icon: a.icon,
+    unlocked: a.unlocked,
+    unlockedAt: a.unlockedat
+  };
+};
+
+const mapActivityLog = (l) => {
+  if (!l) return null;
+  return {
+    id: l.id,
+    action: l.action,
+    xp: l.xp,
+    createdAt: l.createdat
+  };
+};
+
 // ─── GET /api/export ──────────────────────────────────────────
 // Returns a full JSON snapshot of all data
-router.get('/export', (req, res) => {
+router.get('/export', async (req, res) => {
   try {
-    const settings     = db.prepare('SELECT * FROM settings WHERE id = 1').get();
-    const rooms        = db.prepare('SELECT * FROM rooms ORDER BY roadmapOrder ASC').all();
-    const achievements = db.prepare('SELECT * FROM achievements ORDER BY id ASC').all();
-    const activityLogs = db.prepare('SELECT * FROM activity_logs ORDER BY createdAt DESC').all();
+    const settingsRes     = await pool.query('SELECT * FROM settings WHERE id = 1');
+    const roomsRes        = await pool.query('SELECT * FROM rooms ORDER BY roadmapOrder ASC');
+    const achievementsRes = await pool.query('SELECT * FROM achievements ORDER BY id ASC');
+    const activityLogsRes = await pool.query('SELECT * FROM activity_logs ORDER BY createdAt DESC');
+
+    const settings = mapSettings(settingsRes.rows[0]);
+    const rooms = roomsRes.rows.map(mapRoom);
+    const achievements = achievementsRes.rows.map(mapAchievement);
+    const activityLogs = activityLogsRes.rows.map(mapActivityLog);
 
     res.json({
       exportedAt: new Date().toISOString(),
@@ -28,7 +88,8 @@ router.get('/export', (req, res) => {
 
 // ─── POST /api/import ─────────────────────────────────────────
 // Imports a previously exported JSON snapshot
-router.post('/import', (req, res) => {
+router.post('/import', async (req, res) => {
+  const client = await pool.connect();
   try {
     const { settings, rooms, achievements, activityLogs } = req.body;
 
@@ -36,57 +97,53 @@ router.post('/import', (req, res) => {
       return res.status(400).json({ message: 'Invalid import data — missing required fields' });
     }
 
-    // Wrap everything in a transaction so it's all-or-nothing
-    const importAll = db.transaction(() => {
-      // Settings
-      db.prepare(`
-        UPDATE settings SET
-          displayName = ?, avatar = ?, xp = ?, streak = ?,
-          lastCompletionDate = ?, appVersion = ?, seeded = ?,
-          updatedAt = datetime('now')
-        WHERE id = 1
-      `).run(
-        settings.displayName, settings.avatar, settings.xp, settings.streak,
-        settings.lastCompletionDate, settings.appVersion, settings.seeded ?? 1
-      );
+    await client.query('BEGIN');
 
-      // Rooms — clear and re-insert
-      db.prepare('DELETE FROM rooms').run();
-      const insertRoom = db.prepare(`
+    // Settings
+    await client.query(`
+      UPDATE settings SET
+        displayName = $1, avatar = $2, xp = $3, streak = $4,
+        lastCompletionDate = $5, appVersion = $6, seeded = $7,
+        updatedAt = CURRENT_TIMESTAMP
+      WHERE id = 1
+    `, [
+      settings.displayName, settings.avatar, settings.xp, settings.streak,
+      settings.lastCompletionDate, settings.appVersion, settings.seeded ?? 1
+    ]);
+
+    // Rooms — clear and re-insert
+    await client.query('DELETE FROM rooms');
+    for (const r of rooms) {
+      await client.query(`
         INSERT INTO rooms
           (id, roomName, category, path, difficulty, url, status, xpReward, priorityScore, roadmapOrder, createdAt)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      `);
-      for (const r of rooms) {
-        insertRoom.run(
-          r.id, r.roomName, r.category, r.path, r.difficulty,
-          r.url, r.status, r.xpReward, r.priorityScore ?? 0, r.roadmapOrder, r.createdAt
-        );
-      }
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+      `, [
+        r.id, r.roomName, r.category, r.path, r.difficulty,
+        r.url, r.status, r.xpReward, r.priorityScore ?? 0, r.roadmapOrder, r.createdAt
+      ]);
+    }
 
-      // Achievements — clear and re-insert
-      db.prepare('DELETE FROM achievements').run();
-      const insertAch = db.prepare(`
+    // Achievements — clear and re-insert
+    await client.query('DELETE FROM achievements');
+    for (const a of achievements) {
+      await client.query(`
         INSERT INTO achievements (id, title, description, icon, unlocked, unlockedAt)
-        VALUES (?, ?, ?, ?, ?, ?)
-      `);
-      for (const a of achievements) {
-        insertAch.run(a.id, a.title, a.description, a.icon, a.unlocked, a.unlockedAt);
-      }
+        VALUES ($1, $2, $3, $4, $5, $6)
+      `, [a.id, a.title, a.description, a.icon, a.unlocked, a.unlockedAt]);
+    }
 
-      // Activity logs — clear and re-insert
-      if (activityLogs?.length) {
-        db.prepare('DELETE FROM activity_logs').run();
-        const insertLog = db.prepare(`
-          INSERT INTO activity_logs (id, action, xp, createdAt) VALUES (?, ?, ?, ?)
-        `);
-        for (const l of activityLogs) {
-          insertLog.run(l.id, l.action, l.xp, l.createdAt);
-        }
+    // Activity logs — clear and re-insert
+    if (activityLogs?.length) {
+      await client.query('DELETE FROM activity_logs');
+      for (const l of activityLogs) {
+        await client.query(`
+          INSERT INTO activity_logs (id, action, xp, createdAt) VALUES ($1, $2, $3, $4)
+        `, [l.id, l.action, l.xp, l.createdAt]);
       }
-    });
+    }
 
-    importAll();
+    await client.query('COMMIT');
 
     res.json({
       message: 'Import successful',
@@ -97,40 +154,47 @@ router.post('/import', (req, res) => {
       },
     });
   } catch (error) {
+    await client.query('ROLLBACK');
     console.error('Import error:', error);
     res.status(500).json({ message: 'Import failed: ' + error.message });
+  } finally {
+    client.release();
   }
 });
 
 // ─── POST /api/reset ──────────────────────────────────────────
 // Resets all progress (XP, streak, room statuses, activity logs)
 // but keeps the roadmap rooms and achievements definitions intact
-router.post('/reset', (req, res) => {
+router.post('/reset', async (req, res) => {
+  const client = await pool.connect();
   try {
-    const resetAll = db.transaction(() => {
-      // Reset all room statuses to Not Started
-      db.prepare("UPDATE rooms SET status = 'Not Started'").run();
+    await client.query('BEGIN');
 
-      // Reset settings XP, streak, lastCompletionDate
-      db.prepare(`
-        UPDATE settings
-        SET xp = 0, streak = 0, lastCompletionDate = NULL, updatedAt = datetime('now')
-        WHERE id = 1
-      `).run();
+    // Reset all room statuses to Not Started
+    await client.query("UPDATE rooms SET status = 'Not Started'");
 
-      // Reset all achievements to locked
-      db.prepare("UPDATE achievements SET unlocked = 0, unlockedAt = NULL").run();
+    // Reset settings XP, streak, lastCompletionDate
+    await client.query(`
+      UPDATE settings
+      SET xp = 0, streak = 0, lastCompletionDate = NULL, updatedAt = CURRENT_TIMESTAMP
+      WHERE id = 1
+    `);
 
-      // Clear activity logs
-      db.prepare('DELETE FROM activity_logs').run();
-    });
+    // Reset all achievements to locked
+    await client.query("UPDATE achievements SET unlocked = 0, unlockedAt = NULL");
 
-    resetAll();
+    // Clear activity logs
+    await client.query('DELETE FROM activity_logs');
+
+    await client.query('COMMIT');
 
     res.json({ message: 'Progress reset successfully. Rooms and achievements kept.' });
   } catch (error) {
+    await client.query('ROLLBACK');
     console.error('Reset error:', error);
     res.status(500).json({ message: 'Reset failed' });
+  } finally {
+    client.release();
   }
 });
 

@@ -1,29 +1,46 @@
-import db from '../config/db.js';
+import pool from '../config/db.js';
 import { checkAndUnlockAchievements } from '../utils/achievements.js';
 
 // XP rewards by difficulty
 const XP_REWARDS = { Easy: 10, Medium: 25, Hard: 50 };
 
+const mapRoom = (r) => {
+  if (!r) return null;
+  return {
+    id: r.id,
+    roomName: r.roomname,
+    category: r.category,
+    path: r.path,
+    difficulty: r.difficulty,
+    url: r.url,
+    status: r.status,
+    xpReward: r.xpreward,
+    priorityScore: r.priorityscore,
+    roadmapOrder: r.roadmaporder,
+    createdAt: r.createdat
+  };
+};
+
 /**
  * @desc    Get all rooms (with optional search / category / status / path filters)
  * @route   GET /api/rooms
  */
-export const getRooms = (req, res) => {
+export const getRooms = async (req, res) => {
   try {
     const { search, category, status, path } = req.query;
 
     let sql    = 'SELECT * FROM rooms WHERE 1=1';
     const params = [];
 
-    if (category) { sql += ' AND category = ?'; params.push(category); }
-    if (status)   { sql += ' AND status = ?';   params.push(status); }
-    if (path)     { sql += ' AND path = ?';     params.push(path); }
-    if (search)   { sql += ' AND roomName LIKE ?'; params.push(`%${search}%`); }
+    if (category) { params.push(category); sql += ` AND category = $${params.length}`; }
+    if (status)   { params.push(status);   sql += ` AND status = $${params.length}`; }
+    if (path)     { params.push(path);     sql += ` AND path = $${params.length}`; }
+    if (search)   { params.push(`%${search}%`); sql += ` AND roomName LIKE $${params.length}`; }
 
     sql += ' ORDER BY roadmapOrder ASC, id ASC';
 
-    const rooms = db.prepare(sql).all(...params);
-    res.json(rooms);
+    const result = await pool.query(sql, params);
+    res.json(result.rows.map(mapRoom));
   } catch (error) {
     console.error('Get rooms error:', error);
     res.status(500).json({ message: 'Server error' });
@@ -34,11 +51,11 @@ export const getRooms = (req, res) => {
  * @desc    Get single room by ID
  * @route   GET /api/rooms/:id
  */
-export const getRoom = (req, res) => {
+export const getRoom = async (req, res) => {
   try {
-    const room = db.prepare('SELECT * FROM rooms WHERE id = ?').get(req.params.id);
-    if (!room) return res.status(404).json({ message: 'Room not found' });
-    res.json(room);
+    const result = await pool.query('SELECT * FROM rooms WHERE id = $1', [req.params.id]);
+    if (result.rows.length === 0) return res.status(404).json({ message: 'Room not found' });
+    res.json(mapRoom(result.rows[0]));
   } catch (error) {
     console.error('Get room error:', error);
     res.status(500).json({ message: 'Server error' });
@@ -49,7 +66,7 @@ export const getRoom = (req, res) => {
  * @desc    Add a new room
  * @route   POST /api/rooms
  */
-export const addRoom = (req, res) => {
+export const addRoom = async (req, res) => {
   try {
     const { roomName, category, path, difficulty, url, status, roadmapOrder } = req.body;
 
@@ -59,10 +76,11 @@ export const addRoom = (req, res) => {
 
     const xpReward = XP_REWARDS[difficulty] || 10;
 
-    const result = db.prepare(`
+    const result = await pool.query(`
       INSERT INTO rooms (roomName, category, path, difficulty, url, status, xpReward, roadmapOrder)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      RETURNING *
+    `, [
       roomName,
       category,
       path      || 'General',
@@ -71,10 +89,9 @@ export const addRoom = (req, res) => {
       status    || 'Not Started',
       xpReward,
       roadmapOrder || 999
-    );
+    ]);
 
-    const room = db.prepare('SELECT * FROM rooms WHERE id = ?').get(result.lastInsertRowid);
-    res.status(201).json(room);
+    res.status(201).json(mapRoom(result.rows[0]));
   } catch (error) {
     console.error('Add room error:', error);
     res.status(500).json({ message: 'Server error' });
@@ -85,10 +102,11 @@ export const addRoom = (req, res) => {
  * @desc    Update a room
  * @route   PUT /api/rooms/:id
  */
-export const updateRoom = (req, res) => {
+export const updateRoom = async (req, res) => {
   try {
-    const room = db.prepare('SELECT * FROM rooms WHERE id = ?').get(req.params.id);
-    if (!room) return res.status(404).json({ message: 'Room not found' });
+    const roomRes = await pool.query('SELECT * FROM rooms WHERE id = $1', [req.params.id]);
+    if (roomRes.rows.length === 0) return res.status(404).json({ message: 'Room not found' });
+    const room = mapRoom(roomRes.rows[0]);
 
     const { roomName, category, path, difficulty, url, status, roadmapOrder } = req.body;
 
@@ -103,19 +121,19 @@ export const updateRoom = (req, res) => {
       xpReward:     difficulty   !== undefined ? (XP_REWARDS[difficulty] || room.xpReward) : room.xpReward,
     };
 
-    db.prepare(`
+    const result = await pool.query(`
       UPDATE rooms SET
-        roomName = ?, category = ?, path = ?, difficulty = ?,
-        url = ?, status = ?, xpReward = ?, roadmapOrder = ?
-      WHERE id = ?
-    `).run(
+        roomName = $1, category = $2, path = $3, difficulty = $4,
+        url = $5, status = $6, xpReward = $7, roadmapOrder = $8
+      WHERE id = $9
+      RETURNING *
+    `, [
       updated.roomName, updated.category, updated.path, updated.difficulty,
       updated.url, updated.status, updated.xpReward, updated.roadmapOrder,
       Number(req.params.id)
-    );
+    ]);
 
-    const updatedRoom = db.prepare('SELECT * FROM rooms WHERE id = ?').get(Number(req.params.id));
-    res.json(updatedRoom);
+    res.json(mapRoom(result.rows[0]));
   } catch (error) {
     console.error('Update room error:', error);
     res.status(500).json({ message: error.message });
@@ -126,10 +144,10 @@ export const updateRoom = (req, res) => {
  * @desc    Delete a room
  * @route   DELETE /api/rooms/:id
  */
-export const deleteRoom = (req, res) => {
+export const deleteRoom = async (req, res) => {
   try {
-    const result = db.prepare('DELETE FROM rooms WHERE id = ?').run(req.params.id);
-    if (result.changes === 0) return res.status(404).json({ message: 'Room not found' });
+    const result = await pool.query('DELETE FROM rooms WHERE id = $1', [req.params.id]);
+    if (result.rowCount === 0) return res.status(404).json({ message: 'Room not found' });
     res.json({ message: 'Room deleted' });
   } catch (error) {
     console.error('Delete room error:', error);
@@ -141,30 +159,32 @@ export const deleteRoom = (req, res) => {
  * @desc    Mark room as completed — award XP, update streak, check achievements, log activity
  * @route   PUT /api/rooms/:id/complete
  */
-export const completeRoom = (req, res) => {
+export const completeRoom = async (req, res) => {
   try {
-    const room = db.prepare('SELECT * FROM rooms WHERE id = ?').get(req.params.id);
-    if (!room) return res.status(404).json({ message: 'Room not found' });
+    const roomRes = await pool.query('SELECT * FROM rooms WHERE id = $1', [req.params.id]);
+    if (roomRes.rows.length === 0) return res.status(404).json({ message: 'Room not found' });
+    const room = mapRoom(roomRes.rows[0]);
 
     if (room.status === 'Completed') {
       return res.status(400).json({ message: 'Room is already completed' });
     }
 
     // Mark room completed
-    db.prepare("UPDATE rooms SET status = 'Completed' WHERE id = ?").run(req.params.id);
+    await pool.query("UPDATE rooms SET status = 'Completed' WHERE id = $1", [req.params.id]);
 
     // Get / update settings
-    let settings = db.prepare('SELECT * FROM settings WHERE id = 1').get();
+    let settingsRes = await pool.query('SELECT * FROM settings WHERE id = 1');
+    let settings = settingsRes.rows[0];
     const xpReward = room.xpReward;
-    let newXP = settings.xp + xpReward;
+    let newXP = (settings.xp || 0) + xpReward;
 
     // Streak logic
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    let newStreak = settings.streak;
+    let newStreak = settings.streak || 0;
 
-    if (settings.lastCompletionDate) {
-      const lastDate = new Date(settings.lastCompletionDate);
+    if (settings.lastcompletiondate) {
+      const lastDate = new Date(settings.lastcompletiondate);
       lastDate.setHours(0, 0, 0, 0);
       const diffDays = Math.floor((today - lastDate) / (1000 * 60 * 60 * 24));
 
@@ -175,23 +195,31 @@ export const completeRoom = (req, res) => {
       newStreak = 1; // first completion
     }
 
-    db.prepare(`
+    await pool.query(`
       UPDATE settings
-      SET xp = ?, streak = ?, lastCompletionDate = ?, updatedAt = datetime('now')
+      SET xp = $1, streak = $2, lastCompletionDate = $3, updatedAt = CURRENT_TIMESTAMP
       WHERE id = 1
-    `).run(newXP, newStreak, new Date().toISOString());
+    `, [newXP, newStreak, new Date().toISOString()]);
 
     // Log activity
-    db.prepare(`
-      INSERT INTO activity_logs (action, xp) VALUES (?, ?)
-    `).run(`Completed ${room.roomName}`, xpReward);
+    await pool.query(`
+      INSERT INTO activity_logs (action, xp) VALUES ($1, $2)
+    `, [`Completed ${room.roomName}`, xpReward]);
 
     // Reload settings for achievement check
-    settings = db.prepare('SELECT * FROM settings WHERE id = 1').get();
-    const newlyUnlocked = checkAndUnlockAchievements(settings);
+    settingsRes = await pool.query('SELECT * FROM settings WHERE id = 1');
+    settings = settingsRes.rows[0];
+    const mappedSettings = {
+      xp: settings.xp,
+      streak: settings.streak,
+      lastCompletionDate: settings.lastcompletiondate
+    };
+    const newlyUnlocked = await checkAndUnlockAchievements(mappedSettings);
+
+    const updatedRoomRes = await pool.query('SELECT * FROM rooms WHERE id = $1', [req.params.id]);
 
     res.json({
-      room: db.prepare('SELECT * FROM rooms WHERE id = ?').get(req.params.id),
+      room: mapRoom(updatedRoomRes.rows[0]),
       xpAwarded: xpReward,
       totalXP: newXP,
       streak: newStreak,
@@ -207,11 +235,15 @@ export const completeRoom = (req, res) => {
  * @desc    Get dashboard stats summary
  * @route   GET /api/rooms/stats/summary
  */
-export const getStatsSummary = (req, res) => {
+export const getStatsSummary = async (req, res) => {
   try {
-    const total       = db.prepare("SELECT COUNT(*) AS n FROM rooms").get().n;
-    const completed   = db.prepare("SELECT COUNT(*) AS n FROM rooms WHERE status = 'Completed'").get().n;
-    const inProgress  = db.prepare("SELECT COUNT(*) AS n FROM rooms WHERE status = 'In Progress'").get().n;
+    const totalRes       = await pool.query("SELECT COUNT(*) AS n FROM rooms");
+    const completedRes   = await pool.query("SELECT COUNT(*) AS n FROM rooms WHERE status = 'Completed'");
+    const inProgressRes  = await pool.query("SELECT COUNT(*) AS n FROM rooms WHERE status = 'In Progress'");
+
+    const total = parseInt(totalRes.rows[0].n, 10);
+    const completed = parseInt(completedRes.rows[0].n, 10);
+    const inProgress = parseInt(inProgressRes.rows[0].n, 10);
 
     const completionPercentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
@@ -232,18 +264,18 @@ export const getStatsSummary = (req, res) => {
  * @desc    Get recommended next room (lowest roadmapOrder, Not Started)
  * @route   GET /api/rooms/recommend
  */
-export const getRecommendedRoom = (req, res) => {
+export const getRecommendedRoom = async (req, res) => {
   try {
-    const room = db.prepare(`
+    const result = await pool.query(`
       SELECT * FROM rooms WHERE status = 'Not Started'
       ORDER BY roadmapOrder ASC LIMIT 1
-    `).get();
+    `);
 
-    if (!room) {
+    if (result.rows.length === 0) {
       return res.json({ message: 'All rooms completed or in progress!', room: null });
     }
 
-    res.json({ room });
+    res.json({ room: mapRoom(result.rows[0]) });
   } catch (error) {
     console.error('Get recommended room error:', error);
     res.status(500).json({ message: 'Server error' });

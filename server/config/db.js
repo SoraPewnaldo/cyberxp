@@ -1,109 +1,43 @@
 /**
- * CyberXP SQLite Database — Initialization
+ * CyberXP PostgreSQL Database — Initialization
  *
- * Uses the built-in node:sqlite module (Node.js 22.5+).
- * No npm dependencies required for the database layer.
- *
- * DB file: server/data/cyberxp.db
+ * Uses the 'pg' module to connect to a PostgreSQL database.
  */
 
-import { DatabaseSync } from 'node:sqlite';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import fs from 'fs';
+import pg from 'pg';
+const { Pool } = pg;
+import dotenv from 'dotenv';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR  = path.join(__dirname, '..', 'data');
-const DB_PATH   = path.join(DATA_DIR, 'cyberxp.db');
+dotenv.config();
 
-// Ensure data/ directory exists
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
-
-const db = new DatabaseSync(DB_PATH);
-
-// Performance pragmas
-db.exec('PRAGMA journal_mode = WAL');
-db.exec('PRAGMA foreign_keys = ON');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 // ─────────────────────────────────────────────────────────────
-// Table Definitions
+// Default Records Helpers
 // ─────────────────────────────────────────────────────────────
 
-db.exec(`
-  CREATE TABLE IF NOT EXISTS settings (
-    id                 INTEGER PRIMARY KEY DEFAULT 1,
-    displayName        TEXT    DEFAULT 'User',
-    avatar             TEXT    DEFAULT '🛡️',
-    xp                 INTEGER DEFAULT 0,
-    streak             INTEGER DEFAULT 0,
-    lastCompletionDate TEXT,
-    appVersion         TEXT    DEFAULT '1.0.0',
-    seeded             INTEGER DEFAULT 0,
-    createdAt          TEXT    DEFAULT (datetime('now')),
-    updatedAt          TEXT    DEFAULT (datetime('now'))
-  )
-`);
-
-db.exec(`
-  CREATE TABLE IF NOT EXISTS rooms (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    roomName      TEXT    NOT NULL,
-    category      TEXT    DEFAULT 'General',
-    path          TEXT    DEFAULT 'General',
-    difficulty    TEXT    DEFAULT 'Easy',
-    url           TEXT    DEFAULT '',
-    status        TEXT    DEFAULT 'Not Started',
-    xpReward      INTEGER DEFAULT 10,
-    priorityScore INTEGER DEFAULT 0,
-    roadmapOrder  INTEGER DEFAULT 999,
-    createdAt     TEXT    DEFAULT (datetime('now'))
-  )
-`);
-
-db.exec(`
-  CREATE TABLE IF NOT EXISTS achievements (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    title       TEXT NOT NULL,
-    description TEXT,
-    icon        TEXT DEFAULT '🏆',
-    unlocked    INTEGER DEFAULT 0,
-    unlockedAt  TEXT
-  )
-`);
-
-db.exec(`
-  CREATE TABLE IF NOT EXISTS activity_logs (
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
-    action    TEXT NOT NULL,
-    xp        INTEGER DEFAULT 0,
-    createdAt TEXT DEFAULT (datetime('now'))
-  )
-`);
-
-// ─────────────────────────────────────────────────────────────
-// Default Records
-// ─────────────────────────────────────────────────────────────
-
-/** Ensure the single settings row exists */
-function ensureSettings() {
-  const existing = db.prepare('SELECT id FROM settings WHERE id = 1').get();
-  if (!existing) {
-    db.prepare(`
+async function ensureSettings() {
+  const existing = await pool.query('SELECT id FROM settings WHERE id = 1');
+  if (existing.rows.length === 0) {
+    await pool.query(`
       INSERT INTO settings (id, displayName, avatar, xp, streak, appVersion, seeded)
       VALUES (1, 'User', '🛡️', 0, 0, '1.0.0', 0)
-    `).run();
+      ON CONFLICT (id) DO NOTHING
+    `);
   }
 }
 
-/** Seed the 12 achievement definitions (runs only if table is empty) */
-function seedAchievementsIfEmpty() {
-  const count = db.prepare('SELECT COUNT(*) AS n FROM achievements').get();
-  if (count.n > 0) return;
+async function seedAchievementsIfEmpty() {
+  const countRes = await pool.query('SELECT COUNT(*) AS n FROM achievements');
+  const count = parseInt(countRes.rows[0].n, 10);
+  if (count > 0) return;
 
   const ACHIEVEMENTS = [
-    // Existing 12
     { title: 'First Blood',         description: 'Complete your first room',          icon: '🩸' },
     { title: 'Decadent',            description: 'Complete 10 rooms',                 icon: '⚡' },
     { title: 'Half Century',        description: 'Complete 50 rooms',                 icon: '🎯' },
@@ -117,7 +51,6 @@ function seedAchievementsIfEmpty() {
     { title: 'XP Hunter',           description: 'Earn 500 XP',                       icon: '💰' },
     { title: 'Elite Hacker',        description: 'Reach Level 5',                     icon: '🏴‍☠️' },
 
-    // New 38 Achievements
     { title: 'Century Mark',        description: 'Complete 100 rooms',                icon: '💯' },
     { title: 'Two Hundred Club',    description: 'Complete 200 rooms',                icon: '🥈' },
     { title: 'God Mode',            description: 'Complete 500 rooms',                icon: '🥇' },
@@ -160,10 +93,12 @@ function seedAchievementsIfEmpty() {
     { title: 'Zero Day',            description: 'Discover your first 0-day',         icon: '☢️' }
   ];
 
-  const insert = db.prepare(
-    'INSERT INTO achievements (title, description, icon, unlocked) VALUES (?, ?, ?, 0)'
-  );
-  for (const a of ACHIEVEMENTS) insert.run(a.title, a.description, a.icon);
+  for (const a of ACHIEVEMENTS) {
+    await pool.query(
+      'INSERT INTO achievements (title, description, icon, unlocked) VALUES ($1, $2, $3, 0)',
+      [a.title, a.description, a.icon]
+    );
+  }
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -171,23 +106,75 @@ function seedAchievementsIfEmpty() {
 // ─────────────────────────────────────────────────────────────
 
 export async function initializeDB() {
-  ensureSettings();
-  seedAchievementsIfEmpty();
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS settings (
+      id                 INTEGER PRIMARY KEY DEFAULT 1,
+      displayName        TEXT    DEFAULT 'User',
+      avatar             TEXT    DEFAULT '🛡️',
+      xp                 INTEGER DEFAULT 0,
+      streak             INTEGER DEFAULT 0,
+      lastCompletionDate TEXT,
+      appVersion         TEXT    DEFAULT '1.0.0',
+      seeded             INTEGER DEFAULT 0,
+      createdAt          TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updatedAt          TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS rooms (
+      id            SERIAL PRIMARY KEY,
+      roomName      TEXT    UNIQUE NOT NULL,
+      category      TEXT    DEFAULT 'General',
+      path          TEXT    DEFAULT 'General',
+      difficulty    TEXT    DEFAULT 'Easy',
+      url           TEXT    DEFAULT '',
+      status        TEXT    DEFAULT 'Not Started',
+      xpReward      INTEGER DEFAULT 10,
+      priorityScore INTEGER DEFAULT 0,
+      roadmapOrder  INTEGER DEFAULT 999,
+      createdAt     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS achievements (
+      id          SERIAL PRIMARY KEY,
+      title       TEXT NOT NULL,
+      description TEXT,
+      icon        TEXT DEFAULT '🏆',
+      unlocked    INTEGER DEFAULT 0,
+      unlockedAt  TEXT
+    )
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS activity_logs (
+      id        SERIAL PRIMARY KEY,
+      action    TEXT NOT NULL,
+      xp        INTEGER DEFAULT 0,
+      createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  await ensureSettings();
+  await seedAchievementsIfEmpty();
 
   // Seed rooms from README on very first run (seeded flag = 0)
-  const settings = db.prepare('SELECT seeded FROM settings WHERE id = 1').get();
-  if (!settings.seeded) {
+  const settingsRes = await pool.query('SELECT seeded FROM settings WHERE id = 1');
+  const settings = settingsRes.rows[0];
+  if (!settings || !settings.seeded) {
     try {
       const { seedRoomsFromReadme } = await import('../scripts/seedRooms.js');
-      const count = seedRoomsFromReadme(db);
-      db.prepare("UPDATE settings SET seeded = 1, updatedAt = datetime('now') WHERE id = 1").run();
+      const count = await seedRoomsFromReadme(pool);
+      await pool.query("UPDATE settings SET seeded = 1, updatedAt = CURRENT_TIMESTAMP WHERE id = 1");
       console.log(`📚 Seeded ${count} rooms from TryHackMe README`);
     } catch (err) {
       console.warn('⚠️  Could not auto-seed rooms:', err.message);
     }
   }
 
-  console.log(`✅ CyberXP SQLite DB ready → ${DB_PATH}`);
+  console.log(`✅ CyberXP PostgreSQL DB ready`);
 }
 
-export default db;
+export default pool;

@@ -1,5 +1,5 @@
 /**
- * CyberXP — Seed rooms from TryHackMe README into SQLite
+ * CyberXP — Seed rooms from TryHackMe README into PostgreSQL
  *
  * Parses:  Tryhackme readme/README.md
  * Inserts: rooms table (skips duplicates by roomName)
@@ -83,19 +83,21 @@ function parseReadme() {
 }
 
 /**
- * Insert rooms into the SQLite DB (skips duplicates by roomName)
- * @param {DatabaseSync} db
- * @returns {number} count of inserted rooms
+ * Insert rooms into the PostgreSQL DB (skips duplicates by roomName using ON CONFLICT)
+ * @param {object} pool - pg pool
+ * @returns {Promise<number>} count of inserted rooms
  */
-export function seedRoomsFromReadme(db) {
+export async function seedRoomsFromReadme(pool) {
   const rooms = parseReadme();
 
-  const insert = db.prepare(`
-    INSERT OR IGNORE INTO rooms
+  const queryText = `
+    INSERT INTO rooms
       (roomName, category, path, difficulty, url, status, xpReward, roadmapOrder)
     VALUES
-      (?, ?, ?, ?, ?, 'Not Started', ?, ?)
-  `);
+      ($1, $2, $3, $4, $5, 'Not Started', $6, $7)
+    ON CONFLICT (roomName) DO NOTHING
+    RETURNING id
+  `;
 
   // Deduplicate by roomName within the parsed list first
   const seen = new Set();
@@ -105,7 +107,7 @@ export function seedRoomsFromReadme(db) {
     if (seen.has(r.roomName)) continue;
     seen.add(r.roomName);
 
-    const result = insert.run(
+    const result = await pool.query(queryText, [
       r.roomName,
       r.category,
       r.path,
@@ -113,8 +115,10 @@ export function seedRoomsFromReadme(db) {
       r.url,
       r.xpReward,
       r.roadmapOrder
-    );
-    inserted += result.changes;
+    ]);
+    if (result.rowCount > 0) {
+      inserted++;
+    }
   }
 
   return inserted;
@@ -126,23 +130,25 @@ const isMain = process.argv[1] &&
   path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 
 if (isMain) {
-  const { DatabaseSync } = await import('node:sqlite');
-  const { default: dbPath } = await import('../config/db.js');
-  // Re-open db at the correct path
-  const dbFilePath = path.resolve(__dirname, '../data/cyberxp.db');
-  const db = new DatabaseSync(dbFilePath);
+  const { default: pool } = await import('../config/db.js');
 
-  const count = seedRoomsFromReadme(db);
-  const skip  = parseReadme().length - count;
-  console.log(`\n✅ Imported ${count} rooms`);
-  console.log(`⏭️  Skipped  ${skip} duplicates\n`);
+  try {
+    const count = await seedRoomsFromReadme(pool);
+    const skip  = parseReadme().length - count;
+    console.log(`\n✅ Imported ${count} rooms`);
+    console.log(`Skip  ${skip} duplicates\n`);
 
-  // Summary by category
-  const cats = db.prepare(`
-    SELECT category, COUNT(*) AS n FROM rooms GROUP BY category ORDER BY n DESC
-  `).all();
-  console.log('Category breakdown:');
-  for (const c of cats) console.log(`  ${c.category}: ${c.n}`);
-
-  db.close();
+    // Summary by category
+    const catsRes = await pool.query(`
+      SELECT category, COUNT(*) AS n FROM rooms GROUP BY category ORDER BY n DESC
+    `);
+    console.log('Category breakdown:');
+    for (const c of catsRes.rows) {
+      console.log(`  ${c.category}: ${c.n}`);
+    }
+  } catch (err) {
+    console.error('Error during seeding:', err);
+  } finally {
+    await pool.end();
+  }
 }
