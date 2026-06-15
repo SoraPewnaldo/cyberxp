@@ -4,7 +4,6 @@ import API from '../api/axios';
 import RoomCard from '../components/RoomCard';
 import RoomModal from '../components/RoomModal';
 
-const CATEGORIES = ['All', 'General', 'Linux', 'Windows', 'Networking', 'Cryptography', 'Web', 'Forensics', 'PrivEsc', 'Active Directory', 'CTF'];
 const STATUSES = ['All', 'Not Started', 'In Progress', 'Completed'];
 
 export default function Roadmap() {
@@ -12,17 +11,32 @@ export default function Roadmap() {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [paths, setPaths] = useState(['All']);
+  const [pathFilter, setPathFilter] = useState('All');
   const [statusFilter, setStatusFilter] = useState('All');
   const [modalOpen, setModalOpen] = useState(false);
   const [editingRoom, setEditingRoom] = useState(null);
   const [notification, setNotification] = useState(null);
 
+  // Load all unique path names once on mount
+  useEffect(() => {
+    const fetchPaths = async () => {
+      try {
+        const { data } = await API.get('/rooms');
+        const uniquePaths = ['All', ...new Set(data.map((r) => r.path).filter(Boolean))];
+        setPaths(uniquePaths);
+      } catch (err) {
+        console.error('Error fetching paths for filters:', err);
+      }
+    };
+    fetchPaths();
+  }, []);
+
   const fetchRooms = useCallback(async () => {
     try {
       const params = {};
       if (search) params.search = search;
-      if (categoryFilter !== 'All') params.category = categoryFilter;
+      if (pathFilter !== 'All') params.path = pathFilter;
       if (statusFilter !== 'All') params.status = statusFilter;
 
       const { data } = await API.get('/rooms', { params });
@@ -32,7 +46,7 @@ export default function Roadmap() {
     } finally {
       setLoading(false);
     }
-  }, [search, categoryFilter, statusFilter]);
+  }, [search, pathFilter, statusFilter]);
 
   useEffect(() => {
     fetchRooms();
@@ -165,19 +179,19 @@ export default function Roadmap() {
             />
           </div>
 
-          {/* Category filter */}
+          {/* Path (Tree) filter */}
           <div className="flex flex-wrap gap-2">
-            {CATEGORIES.map((cat) => (
+            {paths.map((p) => (
               <button
-                key={cat}
-                onClick={() => setCategoryFilter(cat)}
+                key={p}
+                onClick={() => setPathFilter(p)}
                 className={`px-3 py-1.5 font-bold uppercase transition-all border text-xs font-mono rounded-md ${
-                  categoryFilter === cat
+                  pathFilter === p
                     ? 'bg-[var(--color-cyber-primary)] text-white border-[var(--color-cyber-primary)] shadow-[0_0_10px_var(--color-cyber-primary)]'
                     : 'bg-black/40 text-gray-400 border-white/20 hover:text-white hover:border-white/50'
                 }`}
               >
-                {cat}
+                {p}
               </button>
             ))}
           </div>
