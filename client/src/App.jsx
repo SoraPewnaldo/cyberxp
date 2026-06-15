@@ -13,7 +13,7 @@ export default function App() {
     <SettingsProvider>
       {/* 3D Spline Background Layer */}
       <div className="fixed inset-0 z-[-1] pointer-events-none">
-        <Spline scene="/scene-clean.splinecode" />
+        <Spline scene={`${import.meta.env.BASE_URL}scene-clean.splinecode`} />
       </div>
 
       <Router>
