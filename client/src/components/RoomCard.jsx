@@ -52,7 +52,7 @@ export default function RoomCard({ room, isLocked, onEdit, onDelete, onComplete,
       )}
 
       {/* Actions */}
-      <div className="flex items-center gap-2 mt-auto pt-4 border-t border-[var(--color-cyber-border)]">
+      <div className="flex flex-wrap items-center gap-2 mt-auto pt-4 border-t border-[var(--color-cyber-border)]">
         {room.status === 'Not Started' && (
           isLocked ? (
             <button 

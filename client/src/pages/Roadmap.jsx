@@ -239,9 +239,9 @@ export default function Roadmap() {
                 }
 
                 return (
-                  <div key={room.id || room._id} className="relative pl-14 flex items-start group">
+                  <div key={room.id || room._id} className="relative pl-8 md:pl-14 flex items-start group">
                     {/* Connection Lines */}
-                    <div className="absolute left-6 top-0 bottom-0 w-6 flex justify-center">
+                    <div className="absolute left-3 md:left-6 top-0 bottom-0 w-4 md:w-6 flex justify-center">
                       {/* Vertical line */}
                       <div className={`w-[2px] bg-white/20 absolute ${
                         index === 0 ? 'top-[40px]' : 'top-0'
@@ -249,7 +249,7 @@ export default function Roadmap() {
                         isLast ? 'bottom-[calc(100%-40px)]' : 'bottom-0'
                       }`} />
                       {/* Horizontal line */}
-                      <div className="h-[2px] w-4 bg-white/20 absolute top-[40px] left-[50%]" />
+                      <div className="h-[2px] w-3 md:w-4 bg-white/20 absolute top-[40px] left-[50%]" />
                     </div>
 
                     {/* Room Card */}
