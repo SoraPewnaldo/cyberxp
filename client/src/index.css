@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* ===== Spline Glassmorphism Theme ===== */
+@theme {
+  --color-cyber-bg: #050505;
+  --color-cyber-surface: rgba(20, 20, 20, 0.4);
+  --color-cyber-surface-light: rgba(40, 40, 40, 0.5);
+  --color-cyber-border: rgba(255, 255, 255, 0.1);
+  --color-cyber-primary: #ff4500;
+  --color-cyber-primary-dark: #cc3700;
+  --color-cyber-accent: #8b5cf6;
+  --color-cyber-accent-dark: #6d28d9;
+  --color-cyber-text: #ffffff;
+  --color-cyber-muted: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', monospace;
+    background-color: var(--color-cyber-bg);
+    color: var(--color-cyber-text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* ===== Utility Classes ===== */
+@layer utilities {
+  /* Glass Card */
+  .retro-card {
+    background: var(--color-cyber-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-cyber-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .retro-card-inverted {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: #fff;
+  }
+
+  /* Buttons */
+  .retro-btn {
+    background: rgba(255, 69, 0, 0.15);
+    color: #ff4500;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgba(255, 69, 0, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
+  }
+
+  .retro-btn:hover {
+    background: rgba(255, 69, 0, 0.3);
+    border-color: #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .retro-btn:active {
+    transform: translateY(0);
+  }
+
+  .retro-btn-outline {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+  }
+
+  .retro-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Progress Bar */
+  .retro-progress-container {
+    width: 100%;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-cyber-border);
+    border-radius: 8px;
+    padding: 2px;
+    overflow: hidden;
+  }
+
+  .retro-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #ff4500);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+  }
+
+  /* Badges */
+  .retro-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+  }
+  
+  .retro-badge-inverted {
+    background: rgba(255, 69, 0, 0.2);
+    color: #ffaa88;
+    border: 1px solid rgba(255, 69, 0, 0.4);
+    text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+    border-radius: 6px;
+  }
+
+  /* Inputs */
+  .retro-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  .retro-input:focus {
+    border-color: #ff4500;
+    background: rgba(20, 20, 20, 0.6);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.2);
+  }
+
+  .retro-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Dotted borders -> Solid soft borders */
+  .dotted-border-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dotted-border-t {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Old glassmorphism classes removed */
+}
+
+/* ===== Animations ===== */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes typeIn {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+.animate-type {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeIn 1s steps(40, end);
+}
+
+@keyframes rolling-text {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-rolling-text {
+  animation: rolling-text 4s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
