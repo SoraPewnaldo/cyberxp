@@ -38,12 +38,21 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Cloning & Local Development
+
+Follow these steps to run your own copy of CyberXP locally:
 
 ### Prerequisites
-*   **Node.js 22.5+** is required (as it uses the native `node:sqlite` module).
+*   **Node.js 22.5+** is required to run the backend (as the server relies on Node's native `node:sqlite` database module).
 
-### 1. Setup & Installation
+### 1. Clone the Repository
+```bash
+git clone https://github.com/SoraPewnaldo/cyberxp.git
+cd cyberxp
+```
+
+### 2. Install Dependencies
+Install dependencies for both the frontend client and the backend server:
 ```bash
 # Install server dependencies
 cd server
@@ -54,30 +63,81 @@ cd ../client
 npm install
 ```
 
-### 2. Configure Environment
-Create a `.env` file in the `server` directory:
+### 3. Configure the Environment
+Create a `.env` file inside the `server` directory and set the server port:
 ```ini
 PORT=5000
 ```
 
-### 3. Run the Application
-Start both the backend server and frontend client.
+### 4. Run the Project
+Start the backend server and frontend client concurrently:
 
-#### Start the Server (Terminal 1)
+#### Terminal 1: Start Backend
 ```bash
 cd server
 npm run dev
 ```
-*The database (`server/data/cyberxp.db`) will automatically initialize and seed itself on first run.*
+*Note: The SQLite database (`server/data/cyberxp.db`) will auto-create and populate itself with all 483 rooms and 50 achievements on first startup.*
 
-#### Start the Client (Terminal 2)
+#### Terminal 2: Start Frontend
 ```bash
 cd client
 npm run dev
 ```
+*   **Local Web App Access**: http://localhost:3000
 
-*   **Frontend Access**: http://localhost:3000 (Local Dev) or https://sorapewnaldo.github.io/cyberxp/ (Live Production)
-*   **Backend API Health**: http://localhost:5000/api/health (Local) or https://cyberxp-backend.onrender.com/api/health (Live)
+---
+
+## 🛠️ Detailed Self-Hosting Guide
+
+You can host your own production copy of CyberXP online for free by deploying the frontend to GitHub Pages and the backend to Render.
+
+### Part 1: Deploying the Backend (Express + SQLite) on Render
+Because the database is a local file (`cyberxp.db`), hosting requires a platform with **persistent disk storage** so your progress is saved when the server sleeps/restarts.
+
+1.  Create a free account on **[Render.com](https://render.com)**.
+2.  Click **New +** > **Web Service** and connect your cloned GitHub repository.
+3.  Set the following configuration settings:
+    *   **Root Directory**: `server`
+    *   **Runtime/Language**: `Node`
+    *   **Build Command**: `npm install`
+    *   **Start Command**: `npm run start` (or `node server.js`)
+    *   **Instance Type**: `Free`
+4.  **Attach a Persistent Disk** (Crucial):
+    *   Navigate to the **Disks** tab of your new service on Render.
+    *   Click **Add Disk**.
+    *   Set **Name** to `cyberxp-db-volume`.
+    *   Set **Mount Path** to `/opt/render/project/src/server/data`.
+    *   Set **Size** to `1 GiB` (free tier).
+    *   Click **Save**.
+5.  Once deployed, copy your live Web Service URL (e.g., `https://your-backend.onrender.com`).
+
+### Part 2: Deploying the Frontend (React) on GitHub Pages
+1.  Open `client/src/api/axios.js` and update the production URL fallback to point to your live Render backend URL:
+    ```javascript
+    const API = axios.create({
+      baseURL: import.meta.env.VITE_API_URL || 
+               (isLocalhost ? 'http://localhost:5000/api' : 'https://your-backend.onrender.com/api'),
+    });
+    ```
+2.  Open `client/package.json` and change the homepage property to match your GitHub username and repository name:
+    ```json
+    "homepage": "https://<your-github-username>.github.io/<your-repo-name>"
+    ```
+3.  Open `client/vite.config.js` and update the build base path to match your repository name:
+    ```javascript
+    export default defineConfig({
+      base: '/<your-repo-name>/',
+      // ...
+    });
+    ```
+4.  Deploy your static app to GitHub Pages by running this command inside the `client` folder:
+    ```bash
+    cd client
+    npm run deploy
+    ```
+    *(This compiles your production assets and uploads them to the `gh-pages` branch automatically).*
+5.  Go to your GitHub repository **Settings** > **Pages** and ensure the deployment source branch is set to **`gh-pages`**.
 
 ---
 
