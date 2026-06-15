@@ -6,6 +6,19 @@ The UI is built with a sleek, interactive glassmorphic theme and featuring an im
 
 ---
 
+## 📸 Screenshots
+
+### 📊 Dashboard & Stats
+![Dashboard](Screenshots/Stats.png)
+
+### 🗺️ Interactive Roadmap
+![Roadmap](Screenshots/Missions.png)
+
+### 🏆 Achievements (50+ Trophies)
+![Achievements](Screenshots/Achievements.png)
+
+---
+
 ## 🚀 Key Features
 
 *   **⚡ XP & Leveling System**: Earn XP for completed rooms (Easy +10 XP, Medium +25 XP, Hard +50 XP) and level up dynamically.
