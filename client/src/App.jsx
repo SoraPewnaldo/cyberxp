@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { SettingsProvider } from './context/SettingsContext';
 import Layout from './components/Layout';
