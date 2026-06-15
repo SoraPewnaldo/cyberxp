@@ -8,7 +8,7 @@
 *   Measure Internship Readiness (Knowledge Percentage)
 *   Follow Guided Learning Paths
 
-**Built with React, Express, and SQLite**
+**Built with React, Express, and PostgreSQL (Supabase)**
 
 ---
 
@@ -43,7 +43,8 @@
 Follow these steps to run your own copy of CyberXP locally:
 
 ### Prerequisites
-*   **Node.js 22.5+** is required to run the backend (as the server relies on Node's native `node:sqlite` database module).
+*   **Node.js 18+**
+*   A **PostgreSQL Database** (e.g. a free instance on [Supabase](https://supabase.com))
 
 ### 1. Clone the Repository
 ```bash
@@ -64,10 +65,12 @@ npm install
 ```
 
 ### 3. Configure the Environment
-Create a `.env` file inside the `server` directory and set the server port:
+Create a `.env` file inside the `server` directory and set the environment variables:
 ```ini
 PORT=5000
+DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
 ```
+*Note: Make sure to use an IPv4-compatible connection string (like the Supabase Connection Pooler URI on port `5432` or `6543`) if you run into IPv6 resolution issues on your network.*
 
 ### 4. Run the Project
 Start the backend server and frontend client concurrently:
@@ -77,7 +80,7 @@ Start the backend server and frontend client concurrently:
 cd server
 npm run dev
 ```
-*Note: The SQLite database (`server/data/cyberxp.db`) will auto-create and populate itself with all 483 rooms and 50 achievements on first startup.*
+*Note: On first startup, the database tables will be auto-created and seeded with all 483 rooms and 50 achievements.*
 
 #### Terminal 2: Start Frontend
 ```bash
@@ -92,32 +95,33 @@ npm run dev
 
 You can host your own production copy of CyberXP online for free by deploying the frontend to GitHub Pages and the backend to Render.
 
-### Part 1: Deploying the Backend (Express + SQLite) on Render
-Because the database is a local file (`cyberxp.db`), hosting requires a platform with **persistent disk storage** so your progress is saved when the server sleeps/restarts.
+### Part 1: Deploying the Backend (Express) on Render
+Because CyberXP uses PostgreSQL, you **do not need a persistent disk** on Render! The app is stateless and stores all its progress in the cloud database.
 
-1.  Create a free account on **[Render.com](https://render.com)**.
-2.  Click **New +** > **Web Service** and connect your cloned GitHub repository.
-3.  Set the following configuration settings:
+1.  Create a free account on **[Supabase](https://supabase.com)** and spin up a new project.
+2.  Get your **IPv4 Connection Pooler String**:
+    *   Navigate to your Supabase project dashboard -> click the green **Connect** button at the top center.
+    *   Select the **Direct** connection string tab.
+    *   Choose **Session Pooler** as the Connection Method and set Type to **URI**.
+    *   Copy the URI string (it resolves to IPv4 which is required by Render).
+3.  Create a free account on **[Render.com](https://render.com)**.
+4.  Click **New +** > **Web Service** and connect your cloned GitHub repository.
+5.  Set the following configuration settings:
     *   **Root Directory**: `server`
     *   **Runtime/Language**: `Node`
     *   **Build Command**: `npm install`
     *   **Start Command**: `npm run start` (or `node server.js`)
     *   **Instance Type**: `Free`
-4.  **Attach a Persistent Disk** (Crucial):
-    *   Navigate to the **Disks** tab of your new service on Render.
-    *   Click **Add Disk**.
-    *   Set **Name** to `cyberxp-db-volume`.
-    *   Set **Mount Path** to `/opt/render/project/src/server/data`.
-    *   Set **Size** to `1 GiB` (free tier).
-    *   Click **Save**.
-5.  Once deployed, copy your live Web Service URL (e.g., `https://your-backend.onrender.com`).
+6.  Go to the **Environment** tab on Render and add the environment variable:
+    *   **Key**: `DATABASE_URL`
+    *   **Value**: Your copied Session Pooler URI (replace `[YOUR-PASSWORD]` with your database password).
+7.  Deploy the service. Render will start the server and run database seeding automatically. Copy the live Web Service URL (e.g., `https://your-backend.onrender.com`).
 
 ### Part 2: Deploying the Frontend (React) on GitHub Pages
 1.  Open `client/src/api/axios.js` and update the production URL fallback to point to your live Render backend URL:
     ```javascript
     const API = axios.create({
-      baseURL: import.meta.env.VITE_API_URL || 
-               (isLocalhost ? 'http://localhost:5000/api' : 'https://your-backend.onrender.com/api'),
+      baseURL: import.meta.env.DEV ? '/api' : 'https://your-backend.onrender.com/api'
     });
     ```
 2.  Open `client/package.json` and change the homepage property to match your GitHub username and repository name:
