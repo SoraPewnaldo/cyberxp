@@ -12,11 +12,7 @@
 
 ---
 
-## 📸 Screenshots & Demos
-
-### 🎬 Interactive Walkthrough (Demo)
-![CyberXP Interactive Walkthrough](Screenshots/demo.gif)
-*(To update this, record a GIF of the app in action and save it as `Screenshots/demo.gif`)*
+## 📸 Screenshots
 
 ### 📊 Dashboard & Stats
 ![Dashboard](Screenshots/Stats.png)
