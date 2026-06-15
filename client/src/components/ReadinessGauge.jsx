@@ -2,15 +2,15 @@ import ProgressBar from './ProgressBar';
 
 export default function ReadinessGauge({ score, categories }) {
   const getScoreLabel = (s) => {
-    if (s >= 75) return 'Ready';
-    if (s >= 50) return 'Getting There';
-    if (s >= 25) return 'In Progress';
-    return 'Just Starting';
+    if (s >= 75) return 'Expert';
+    if (s >= 50) return 'Intermediate';
+    if (s >= 25) return 'Beginner';
+    return 'Novice';
   };
 
   return (
     <div className="retro-card">
-      <h3 className="text-2xl text-white mb-4 border-b-2 border-dotted border-gray-600 pb-2">🎓 Internship Readiness</h3>
+      <h3 className="text-2xl text-white mb-4 border-b-2 border-dotted border-gray-600 pb-2">🧠 Knowledge Percentage</h3>
 
       <div className="flex flex-col items-center">
         <div className="mb-4 text-center">

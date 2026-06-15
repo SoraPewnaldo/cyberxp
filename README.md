@@ -1,6 +1,6 @@
 # 🥷 CyberXP — Gamified Cybersecurity Learning Tracker
 
-CyberXP is a premium, retro-futuristic gamified learning tracker designed to organize, monitor, and accelerate your cybersecurity learning journey. It parses and tracks progress across a list of 500+ free TryHackMe rooms, providing XP, leveling, consecutive-day streak tracking, a variety of unlocked achievements, and internship readiness analysis.
+CyberXP is a premium, retro-futuristic gamified learning tracker designed to organize, monitor, and accelerate your cybersecurity learning journey. It parses and tracks progress across a list of 500+ free TryHackMe rooms, providing XP, leveling, consecutive-day streak tracking, a variety of unlocked achievements, and knowledge percentage tracking.
 
 The UI is built with a sleek, interactive glassmorphic theme and featuring an immersive 3D Spline scene in the background.
 
@@ -11,7 +11,7 @@ The UI is built with a sleek, interactive glassmorphic theme and featuring an im
 *   **⚡ XP & Leveling System**: Earn XP for completed rooms (Easy +10 XP, Medium +25 XP, Hard +50 XP) and level up dynamically.
 *   **🔥 Streak Tracking**: Monitors daily activity and maintains active combos to motivate consistent practice.
 *   **🏆 50+ Achievements**: Unlock unique, cybersecurity-themed milestone badges as you learn.
-*   **🎓 Internship Readiness Analytics**: Analyzes your skill distribution across domains (Linux, Windows, Web, Forensics, CTFs, etc.) to give a weighted readiness score.
+*   **🧠 Knowledge Percentage Analytics**: Analyzes your skill distribution across domains (Linux, Windows, Web, Forensics, CTFs, etc.) to give a weighted knowledge percentage.
 *   **🎯 Smart Recommendations**: Suggests the next best room to attempt based on difficulty and path sequencing.
 *   **🗺️ Interactive Roadmap**: Search, filter, and track rooms grouped by path and categories.
 *   **🔮 Stunning Glassmorphism UI**: Premium visual aesthetics, featuring micro-animations and an interactive 3D Spline background.
